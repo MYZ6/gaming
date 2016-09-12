@@ -1,0 +1,44 @@
+﻿body {
+	background: #593B21;
+	color: #fff4f0;
+}
+
+#topinfo {
+	height: 75px;
+}
+
+#topinfo span {
+	display: inline-block;
+	text-align: center;
+	line-height: 15px;
+	padding: 5px;
+}
+
+#topinfo .btn {
+	border-radius: 10%;
+	font-size: 12px;
+}
+
+#btn-swichtable {
+	background: #FB9727;
+	cursor: pointer;
+}
+
+#btn-pool {
+	background: #C69F46;
+}
+
+.pool-info {
+	padding: 5px;
+}
+
+.pool-info .pool-amount {
+	height: 22px;
+}
+
+.pool-amount v {
+	display: inline-block;
+	text-align: left;
+	padding-left: 8px;
+	width: 95px;
+}
