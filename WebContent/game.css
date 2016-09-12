@@ -1,10 +1,12 @@
 ﻿body {
 	background: #593B21;
 	color: #fff4f0;
+	font-size: 14px;
 }
 
 #topinfo {
 	height: 75px;
+	font-size: 12px;
 }
 
 #topinfo span {
@@ -14,9 +16,8 @@
 	padding: 5px;
 }
 
-#topinfo .btn {
+.btn {
 	border-radius: 10%;
-	font-size: 12px;
 }
 
 #btn-swichtable {
@@ -24,7 +25,7 @@
 	cursor: pointer;
 }
 
-#btn-pool {
+#btn-pool, #btn-limit {
 	background: #C69F46;
 }
 
@@ -32,13 +33,167 @@
 	padding: 5px;
 }
 
-.pool-info .pool-amount {
+.pool-info .pool-amount, .table-info div, .limit-info div {
 	height: 22px;
 }
 
-.pool-amount v {
+.table-info div l {
+	display: inline-block;
+	width: 35px;
+}
+
+.pool-amount v, .table-info div v, .limit-info div v {
 	display: inline-block;
 	text-align: left;
 	padding-left: 8px;
-	width: 95px;
+	width: 35px;
+}
+
+.table-info div v {
+	width: 45px;
+}
+
+.vedio-content {
+	height: 180px;
+	background: black;
+}
+
+#chip-info {
+	height: 100px;
+	margin: 1px;
+}
+
+#chip-info span {
+	display: inline-block;
+	text-align: center;
+	line-height: 100px;
+	width: 31%;
+	font-size: 36px;
+	/* 	padding: 5px; */
+}
+
+.dragon-chip {
+	background: #1540E5;
+}
+
+.tie-chip {
+	background: #487018;
+}
+
+.tiger-chip {
+	background: #B02913;
+}
+
+#middle-cmd {
+	height: 36px;
+	font-size: 13px;
+}
+
+#middle-cmd span.btn {
+	line-height: 35px;
+	padding: 5px 10px;
+	background: #6D2C0C;
+	cursor: pointer;
+}
+
+#btn-swichnet {
+	
+}
+
+#btn-confirmchip {
+	
+}
+
+#btn-cancelchip {
+	
+}
+
+#total-chip v {
+	display: inline-block;
+	width: 45px;
+	background: #1D0F06;
+}
+
+#chip-list {
+	text-align: center;
+}
+
+#chip-list span {
+	display: inline-block;
+	width: 40px;
+	height: 29px;
+	background-size: cover;
+	margin: 2px;
+	cursor: pointer;
+}
+
+.chip10 {
+	background: url(img/chip10.png);
+}
+
+.chip50 {
+	background: url(img/chip50.png);
+}
+
+.chip100 {
+	background: url(img/chip100.png);
+}
+
+.chip500 {
+	background: url(img/chip500.png);
+}
+
+.chip1k {
+	background: url(img/chip1k.png);
+}
+
+.chip5k {
+	background: url(img/chip5k.png);
+}
+
+#road-info span {
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+}
+
+#road-map {
+	background: white;
+	width: 300px;
+	height: 130px;
+}
+
+#road-data v {
+	display: inline-block;
+	width: 30px;
+}
+
+#btn-dragon-ask {
+	color: white;
+	font-size: 13px;
+	background: #1540E5;
+}
+
+#btn-tiger-ask {
+	color: white;
+	font-size: 13px;
+	background: #B02913;
+}
+
+#bottom-bar span {
+	margin-left: 8px;
+}
+
+#bottom-bar v {
+	display: inline-block;
+	width: 60px;
+	background: #1D0F06;
+}
+
+#btn-returnhall {
+	line-height: 30px;
+	padding: 5px 10px;
+	background: #BC7115;
+	cursor: pointer;
+	font-size: 12px;
 }

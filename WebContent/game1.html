@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-	<title>百家乐</title>
+	<title>龙虎</title>
 	
 	<link href="game.css" rel="stylesheet" type="text/css">
 	
@@ -28,64 +28,60 @@
 			本<br>台<br>限<br>红
 		</span>
 		<span class="table-info">
-			<div id="table-no">台号<v></v></div>
-			<div id="play-no">场<v></v></div>
-			<div id="seq-no">次<v></v></div>
+			<div id="table-no"><l>台号</l><v></v></div>
+			<div id="play-no"><l>场</l><v></v></div>
+			<div id="seq-no"><l>次</l><v></v></div>
 		</span>
 		<span class="limit-info">
 			<div id="up-limit">上限<v></v></div>
+			<div></div>
 			<div id="down-limit">下限<v></v></div>
 		</span>
-		<span>
-			
-			
-			
-		</span>
-		<span>
-			
-			
-		</span>
 	</div>
-	<div id="vedio1" class="vedio-content">
+	<div class="vedio-content">
 <!-- 		<script type="text/javascript" src="player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://live.hkstv.hk.lxdns.com/live/hks&autostart=true&buffer=5&lang=zh_CN&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&poster=http://jackzhang1204.github.io/materials/poster.png&title=LiveVideo&skin=liveWhite"></script> -->
 	</div>
-	<div>
-		<span>龙</span>
-		<span>和</span>
-		<span>虎</span>
+	<div id="chip-info">
+		<span class="dragon-chip">龙</span>
+		<span class="tie-chip">和</span>
+		<span class="tiger-chip">虎</span>
 	</div>
-	<div>
-		<span>线路切换</span>
-		<span>总下注</span>
-		<span>确定下注</span>
-		<span>取消下注</span>
+	<div id="middle-cmd">
+		<span id="btn-swichnet" class="btn">线路切换</span>
+		<span id="total-chip">总下注：<v>&nbsp;</v></span>
+		<span id="btn-confirmchip" class="btn">确定下注</span>
+		<span id="btn-cancelchip" class="btn">取消下注</span>
 	</div>
-	<div>
-		<span>10</span>
-		<span>50</span>
-		<span>100</span>
-		<span>500</span>
-		<span>1K</span>
-		<span>5K</span>
+	<div id="chip-list">
+		<span class="chip10">&nbsp;</span>
+		<span class="chip50">&nbsp;</span>
+		<span class="chip100">&nbsp;</span>
+		<span class="chip500">&nbsp;</span>
+		<span class="chip1k">&nbsp;</span>
+		<span class="chip5k">&nbsp;</span>
 	</div>
-	<div>
-		<div></div>
-		<span>龙</span>20
-		<span>虎</span>24
-		<span>和</span>4
-		<span>下局开龙</span>
-		<span>下局开虎</span>
-		<span>龙问路</span>
-		<span>虎问路</span>
+	<div id="road-info">
+		<span id="road-map"></span>
+		<span id="road-data">
+			<div>龙<v>20</v></div>
+			<div>虎<v>24</v></div>
+			<div>和<v>4</v></div>
+			<div>下局开龙</div>
+			<div>&nbsp;</div>
+			<div>下局开虎</div>
+			<div>&nbsp;</div>
+			<div id="btn-dragon-ask">龙问路</div>
+			<div id="btn-tiger-ask">虎问路</div>
+		</span>
 	</div>
-	<div>
-		<span>最新消息：</span>
-			欢迎光临永盛贵宾汇。从2016年8月25日早上07:00开始所有百家乐台面实行“先发牌，后下注”模式。
+	<div id="bottom-bar">
+<!-- 		<span>最新消息：</span> -->
+<!-- 			欢迎光临永盛贵宾汇。从2016年8月25日早上07:00开始所有百家乐台面实行“先发牌，后下注”模式。 -->
 		
-		<span>会员</span>test2
-		<span>可用余额</span>5081.40
+		<span>会员<v>test2</v></span>
+		<span>可用余额<v>5081.40</v></span>
 		<span>记录</span>
-		<span>返回大厅</span>
+		<span id="btn-returnhall" class="btn">返回大厅</span>
 	</div>
 	
 </body>
