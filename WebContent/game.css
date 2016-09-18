@@ -158,12 +158,14 @@
 }
 
 .road-map {
+	/* 	display: block !important; */
+	white-space: nowrap;
 	text-align: left !important;
 	background: white;
 	width: 300px;
 	height: 120px;
-/* 	overflow-x: scroll; */
-/* 	overflow-y: hidden; */
+	overflow-x: auto;
+	overflow-y: hidden;
 	/* 	position:relative;  */
 }
 

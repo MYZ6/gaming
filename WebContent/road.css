@@ -36,6 +36,31 @@
 .big-road .big-dtie {
 	background-image: url(img/bigroad/dragon-tie.png);
 }
+
 .big-road .big-ttie {
 	background-image: url(img/bigroad/tiger-tie.png);
+}
+
+.big-eye-road .big-eye-red {
+	background-image: url(img/bigroad/dragon.png);
+}
+
+.big-eye-road .big-eye-blue {
+	background-image: url(img/bigroad/tiger.png);
+}
+
+.little-road .little-red {
+	background-image: url(img/downroad/little-red.png);
+}
+
+.little-road .little-blue {
+	background-image: url(img/downroad/little-blue.png);
+}
+
+.yy-road .yy-red {
+	background-image: url(img/downroad/yy-red.png);
+}
+
+.yy-road .yy-blue {
+	background-image: url(img/downroad/yy-blue.png);
 }
