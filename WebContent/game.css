@@ -157,10 +157,14 @@
 	text-align: center;
 }
 
-#road-map {
+.road-map {
+	text-align: left !important;
 	background: white;
 	width: 300px;
-	height: 130px;
+	height: 120px;
+/* 	overflow-x: scroll; */
+/* 	overflow-y: hidden; */
+	/* 	position:relative;  */
 }
 
 #road-data v {

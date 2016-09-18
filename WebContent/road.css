@@ -1,0 +1,41 @@
+﻿.road-map .col {
+	display: inline-block;
+	/* 	width: 20px; */
+	height: 100%;
+}
+
+.road-map .bead {
+	display: block !important;
+	text-align: left;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	height: 20px;
+}
+
+.bead-road .bead-dragon {
+	background-image: url(img/dragon.png);
+}
+
+.bead-road .bead-tiger {
+	background-image: url(img/tiger.png);
+}
+
+.bead-road .bead-tie {
+	background-image: url(img/tie.png);
+}
+
+.big-road .big-dragon {
+	background-image: url(img/bigroad/dragon.png);
+}
+
+.big-road .big-tiger {
+	background-image: url(img/bigroad/tiger.png);
+}
+
+.big-road .big-dtie {
+	background-image: url(img/bigroad/dragon-tie.png);
+}
+.big-road .big-ttie {
+	background-image: url(img/bigroad/tiger-tie.png);
+}
