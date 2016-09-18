@@ -1,0 +1,26 @@
+﻿#road-map .col {
+	display: inline-block;
+	/* 	width: 20px; */
+	height: 100%;
+}
+
+#road-map .bead {
+	display: block;
+	text-align: left;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	height: 20px;
+}
+
+#road-map .bead-dragon {
+	background-image: url(img/dragon.png);
+}
+
+#road-map .bead-tiger {
+	background-image: url(img/tiger.png);
+}
+
+#road-map .bead-tie {
+	background-image: url(img/tie.png);
+}

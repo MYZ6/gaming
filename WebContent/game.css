@@ -158,9 +158,11 @@
 }
 
 #road-map {
+	text-align: left !important;
 	background: white;
 	width: 300px;
-	height: 130px;
+	height: 120px;
+	/* 	position:relative;  */
 }
 
 #road-data v {
