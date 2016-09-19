@@ -5,7 +5,7 @@
 function refreshRoad() {
 	$.ajax({
 		type : "GET",
-		url : 'data/history.json',
+		url : 'data/history2.json',
 		error : function() {
 			console.error("query failed");
 		},
@@ -13,6 +13,7 @@ function refreshRoad() {
 			beadRoadRender(data);
 
 			bigRoadRender(data);
+			console.log(bigColData)
 			downroadAnalyse();
 
 			downroadRender('big-eye', bigEyeData);
@@ -41,7 +42,7 @@ function bigRoadRender(data) {
 				height : 6,
 				data : []
 			});
-		} else if (lastType != rtype) {
+		} else if (lastType != rtype && rtype != 3) {// not tie
 			colNo++;
 			bigColData.push({
 				height : 6,
@@ -50,33 +51,45 @@ function bigRoadRender(data) {
 			// addCol(colNo);
 		}
 		var colData = bigColData[colNo];
-		item.col = colNo;
 		var colLength = colData.data.length;
-		var cheight = colData.height;
 		// colData.height = colLength;
 
-		var cc = colNo;
-		var cr = colLength;
-		if (cheight == 6 && colLength < 6 && coordinateArr[colNo][colLength] != -1) {
-			colData.height = colLength;
-			cheight = colLength;
-		}
-		if (colLength < cheight) {
-			// not taken by prior long dragon
-			if (coordinateArr[colNo][cheight] == -1) {
-				// colData.height = colLength;
-				// } else {// turn right, boundary value
-				// cc = colNo + (colLength - cheight) + 1;
-				// cr = colLength - 1;
+		if (rtype == 3) {
+			if (colLength > 0) {// ignore the first tie
+				var tieCount = colData.data[colLength - 1].tieCount;
+				if (tieCount == undefined) {
+					tieCount = 1;
+				} else {
+					tieCount += 1;
+				}
+				colData.data[colLength - 1].tieCount = tieCount;
 			}
-		} else {// long dragon
-			cc = colNo + (colLength - cheight) + 1;
-			cr = cheight - 1;
+		} else {
+			var cheight = colData.height;
+			var cc = colNo;
+			var cr = colLength;
+			if (cheight == 6 && colLength < 6 && coordinateArr[colNo][colLength] != -1) {
+				colData.height = colLength;
+				cheight = colLength;
+			}
+			if (colLength < cheight) {
+				// not taken by prior long dragon
+				if (coordinateArr[colNo][cheight] == -1) {
+					// colData.height = colLength;
+					// } else {// turn right, boundary value
+					// cc = colNo + (colLength - cheight) + 1;
+					// cr = colLength - 1;
+				}
+			} else {// long dragon
+				cc = colNo + (colLength - cheight) + 1;
+				cr = cheight - 1;
+			}
+			item.col = cc;
+			item.row = cr;
+
+			colData.data.push(item);
+			coordinateArr[cc][cr] = i;
 		}
-		coordinateArr[cc][cr] = i;
-		item.col = cc;
-		item.row = cr;
-		colData.data.push(item);
 		lastType = rtype;
 		if (i == 15) {
 			// return false;
@@ -108,12 +121,12 @@ function bigRoadRender(data) {
 			} else {
 				var item = data[dataIndex];
 				var rtype = item.resultType;
-				if (rtype == 2) {
+				var tieCount = item.tieCount;
+
+				if (tieCount != undefined) {
+					span = tieCellRender(rtype, tieCount);
+				} else if (rtype == 2) {
 					span = '<span class="bead big-tiger"></span>';
-				} else if (rtype == 3) {
-					span = '<span class="bead big-dtie"></span>';
-				} else if (rtype == 4) {
-					span = '<span class="bead big-ttie"></span>';
 				}
 			}
 			$('.big-road .col' + i).append(span);
@@ -121,6 +134,15 @@ function bigRoadRender(data) {
 	}
 	function addCol(_colNo) {
 		$('.big-road').append('<span class="col col' + _colNo + '"></span>');
+	}
+	function tieCellRender(_rtype, _tieCount) {
+		var _class = '';
+		if (_rtype == 2) {
+			_class = 'ttie' + _tieCount;
+		} else {
+			_class = 'dtie' + _tieCount;
+		}
+		return '<span class="bead big-' + _class + '"></span>';
 	}
 }
 

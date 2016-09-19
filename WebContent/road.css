@@ -33,12 +33,24 @@
 	background-image: url(img/bigroad/tiger.png);
 }
 
-.big-road .big-dtie {
-	background-image: url(img/bigroad/dragon-tie.png);
+.big-road .big-dtie1 {
+	background-image: url(img/bigroad/dragon-tie1.png);
 }
 
-.big-road .big-ttie {
-	background-image: url(img/bigroad/tiger-tie.png);
+.big-road .big-dtie2 {
+	background-image: url(img/bigroad/dragon-tie2.png);
+}
+
+.big-road .big-dtie4 {
+	background-image: url(img/bigroad/dragon-tie4.png);
+}
+
+.big-road .big-ttie1 {
+	background-image: url(img/bigroad/tiger-tie1.png);
+}
+
+.big-road .big-ttie3 {
+	background-image: url(img/bigroad/tiger-tie3.png);
 }
 
 .big-eye-road .big-eye-red {
