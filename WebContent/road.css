@@ -1,4 +1,7 @@
-﻿﻿.road-map .col {
+﻿@charset "utf-8";
+
+/* '﻿﻿.road-map .col' not work, very strange */
+.col {
 	display: inline-block;
 	/* 	width: 20px; */
 	height: 100%;
