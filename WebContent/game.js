@@ -1,6 +1,11 @@
 ﻿$(function() {
 	initData();
 	refreshPool();
+	
+	initPlayer();
+	$('#btn-swichnet').click(changeAngle);
+	$('#btn-confirmchip').click(changeAngle2);
+	
 });
 
 function refreshPool() {
@@ -34,4 +39,30 @@ function initData() {
 			$('#down-limit v').html(data.downLimit);
 		}
 	});
+}
+var player = null;
+function initPlayer() {
+	player = videojs('really-cool-video', { /* Options */}, function() {
+		console.log('Good to go!');
+
+		this.play(); // if you don't trust autoplay for some reason
+
+		// How about an event listener?
+		this.on('ended', function() {
+			console.log('awww...over so soon?');
+		});
+	});
+}
+
+function changeAngle() {
+	player.pause();
+	player.src('http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/szws.m3u8');
+	player.load();
+	player.play();
+}
+function changeAngle2() {
+	player.pause();
+	player.src('http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8');
+	player.load();
+	player.play();
 }

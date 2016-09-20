@@ -10,6 +10,10 @@
 	<link href="road.css" rel="stylesheet" type="text/css">
 	
 	<script type="text/javascript" src="lib/jquery-1.11.3.js"></script>
+	
+	<link href="lib/videojs/video-js.min.css" rel="stylesheet">
+	<script src="lib/videojs/video.min.js"></script>
+	
 	<script type="text/javascript" src="game.js"></script>
 	<script type="text/javascript" src="road.js"></script>
 </head>
@@ -41,7 +45,14 @@
 		</span>
 	</div>
 	<div class="vedio-content">
-<!-- 		<script type="text/javascript" src="player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://live.hkstv.hk.lxdns.com/live/hks&autostart=true&buffer=5&lang=zh_CN&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&poster=http://jackzhang1204.github.io/materials/poster.png&title=LiveVideo&skin=liveWhite"></script> -->
+		<video id="really-cool-video" class="video-js vjs-default-skin"
+		 preload="auto" style="width: 100%; height: 100%;" poster="really-cool-video-poster.jpg"
+		 data-setup='{}' src="http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8">
+		  <p class="vjs-no-js">
+		    To view this video please enable JavaScript, and consider upgrading to a web browser
+		    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+		  </p>
+		</video>
 	</div>
 	<div id="chip-info">
 		<span class="dragon-chip">龙</span>
