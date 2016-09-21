@@ -45,8 +45,10 @@
 		</span>
 	</div>
 	<div class="vedio-content">
+		<span id="btn-videonear" class="btn">近端</span>
+		<span id="btn-videofar" class="btn">远端</span>
 		<video id="really-cool-video" class="video-js vjs-default-skin"
-		 preload="auto" style="width: 100%; height: 100%;" poster="really-cool-video-poster.jpg"
+		 preload="auto" style="width: 100%; height: 180px;" poster="really-cool-video-poster.jpg"
 		 data-setup='{}' src="http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8">
 		  <p class="vjs-no-js">
 		    To view this video please enable JavaScript, and consider upgrading to a web browser
@@ -55,9 +57,21 @@
 		</video>
 	</div>
 	<div id="chip-info">
-		<span class="dragon-chip">龙</span>
-		<span class="tie-chip">和</span>
-		<span class="tiger-chip">虎</span>
+		<span class="dragon-chip">
+			<div class="chip-amount prepare-chip">0</div>
+			<div>龙</div	>
+			<div class="chip-amount certain-chip">0</div>
+		</span>
+		<span class="tie-chip">
+			<div class="chip-amount prepare-chip">0</div>
+			<div>和</div>
+			<div class="chip-amount certain-chip">0</div>
+		</span>
+		<span class="tiger-chip">
+			<div class="chip-amount prepare-chip">0</div>
+			<div>虎</div>
+			<div class="chip-amount certain-chip">0</div>
+		</span>
 	</div>
 	<div id="middle-cmd">
 		<span id="btn-swichnet" class="btn">线路切换</span>
@@ -65,13 +79,21 @@
 		<span id="btn-confirmchip" class="btn">确定下注</span>
 		<span id="btn-cancelchip" class="btn">取消下注</span>
 	</div>
+	<div id="float-chip">
+		<img id="chip10h" class="float-chip" src="img/chip10h.png" />
+		<img id="chip50h" class="float-chip" src="img/chip50h.png" />
+		<img id="chip100h" class="float-chip" src="img/chip100h.png" />
+		<img id="chip500h" class="float-chip" src="img/chip500h.png" />
+		<img id="chip1000h" class="float-chip" src="img/chip1kh.png" />
+		<img id="chip5000h" class="float-chip" src="img/chip5kh.png" />
+	</div>
 	<div id="chip-list">
-		<span class="chip10">&nbsp;</span>
-		<span class="chip50">&nbsp;</span>
-		<span class="chip100">&nbsp;</span>
-		<span class="chip500">&nbsp;</span>
-		<span class="chip1k">&nbsp;</span>
-		<span class="chip5k">&nbsp;</span>
+		<span class="chip10" chip="10">&nbsp;</span>
+		<span class="chip50" chip="50">&nbsp;</span>
+		<span class="chip100" chip="100">&nbsp;</span>
+		<span class="chip500" chip="500">&nbsp;</span>
+		<span class="chip1k" chip="1000">&nbsp;</span>
+		<span class="chip5k" chip="5000">&nbsp;</span>
 	</div>
 	<div id="road-info">
 		<span class="bead-road road-map"></span>

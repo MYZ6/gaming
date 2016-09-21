@@ -54,22 +54,44 @@
 }
 
 .vedio-content {
-	height: 180px;
+	/* 	height: 200px; */
 	background: black;
 }
 
+.vedio-content span.btn {
+	background: #fd9c0c none repeat scroll 0 0;
+	cursor: pointer;
+	line-height: 35px;
+	padding: 5px 10px;
+	margin-left: 20px;
+}
+
 #chip-info {
-	height: 100px;
+	/* 	height: 100px; */
 	margin: 1px;
 }
 
 #chip-info span {
+	padding: 10px 0px;
 	display: inline-block;
 	text-align: center;
-	line-height: 100px;
+	line-height: 60px;
 	width: 31%;
 	font-size: 36px;
 	/* 	padding: 5px; */
+}
+
+#chip-info span:hover {
+	opacity: 0.5;
+}
+
+#chip-info .chip-amount {
+	line-height: 25px;
+	font-size: 16px;
+}
+
+#chip-info .certain-chip {
+	color: #FFFF17;
 }
 
 .dragon-chip {
@@ -123,7 +145,7 @@
 	width: 50px;
 	height: 40px;
 	background-size: cover;
-/* 	margin: 2px; */
+	/* 	margin: 2px; */
 	cursor: pointer;
 }
 
@@ -175,6 +197,12 @@
 	background: url(img/chip5kh.png);
 }
 
+.float-chip {
+	display: none;
+	position: absolute;
+	width: 50px;
+}
+
 #road-info span {
 	font-size: 12px;
 	display: inline-block;
@@ -186,7 +214,7 @@
 	white-space: nowrap;
 	text-align: left !important;
 	background: white;
-	width: 300px;
+	width: 280px;
 	height: 120px;
 	overflow-x: auto;
 	overflow-y: hidden;

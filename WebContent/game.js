@@ -3,8 +3,6 @@
 	refreshPool();
 
 	initPlayer();
-	$('#btn-swichnet').click(changeAngle);
-	$('#btn-confirmchip').click(changeAngle2);
 
 	initEvent();
 
@@ -54,6 +52,8 @@ function initPlayer() {
 			console.log('awww...over so soon?');
 		});
 	});
+	$('#btn-videonear').click(changeAngle);
+	$('#btn-videofar').click(changeAngle2);
 }
 
 function changeAngle() {
@@ -78,4 +78,28 @@ function initEvent() {
 			$(this).addClass('selected');
 		}
 	});
+	$('#chip-info span').click(function(evt) {
+		var schip = $('#chip-list .selected').attr('chip');
+		console.log(schip)
+		if (schip == undefined) {
+			$(this).css('cursor', 'auto');
+			return;
+		}
+		$(this).css('cursor', 'pointer');
+		var $fchip = $('#chip' + schip + 'h');
+		// console.log($fchip)
+		$fchip.css({
+			'left' : evt.pageX - 25,
+			'top' : evt.pageY - 25,
+		}).show();
+		setTimeout(function() {
+			$fchip.hide();
+		}, 200);
+
+		var prepareChip = $('.prepare-chip', this).html();
+		prepareChip = parseInt(prepareChip) + parseInt(schip);
+		$('.prepare-chip', this).html(prepareChip);
+
+	});
+
 }
