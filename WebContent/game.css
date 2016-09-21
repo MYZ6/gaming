@@ -120,10 +120,10 @@
 
 #chip-list span {
 	display: inline-block;
-	width: 40px;
-	height: 29px;
+	width: 50px;
+	height: 40px;
 	background-size: cover;
-	margin: 2px;
+/* 	margin: 2px; */
 	cursor: pointer;
 }
 
@@ -131,24 +131,48 @@
 	background: url(img/chip10.png);
 }
 
+.chip10.selected {
+	background: url(img/chip10h.png);
+}
+
 .chip50 {
 	background: url(img/chip50.png);
+}
+
+.chip50.selected {
+	background: url(img/chip50h.png);
 }
 
 .chip100 {
 	background: url(img/chip100.png);
 }
 
+.chip100.selected {
+	background: url(img/chip100h.png);
+}
+
 .chip500 {
 	background: url(img/chip500.png);
+}
+
+.chip500.selected {
+	background: url(img/chip500h.png);
 }
 
 .chip1k {
 	background: url(img/chip1k.png);
 }
 
+.chip1k.selected {
+	background: url(img/chip1kh.png);
+}
+
 .chip5k {
 	background: url(img/chip5k.png);
+}
+
+.chip5k.selected {
+	background: url(img/chip5kh.png);
 }
 
 #road-info span {

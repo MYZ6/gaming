@@ -1,11 +1,13 @@
 ﻿$(function() {
 	initData();
 	refreshPool();
-	
+
 	initPlayer();
 	$('#btn-swichnet').click(changeAngle);
 	$('#btn-confirmchip').click(changeAngle2);
-	
+
+	initEvent();
+
 });
 
 function refreshPool() {
@@ -65,4 +67,15 @@ function changeAngle2() {
 	player.src('http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8');
 	player.load();
 	player.play();
+}
+
+function initEvent() {
+	$('#chip-list span').click(function(evt) {
+		if ($(this).hasClass('selected')) {
+			return;
+		} else {
+			$('#chip-list span.selected').removeClass('selected');
+			$(this).addClass('selected');
+		}
+	});
 }
