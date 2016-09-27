@@ -1,0 +1,271 @@
+body {
+	background: #593B21;
+	color: #fff4f0;
+	font-size: 14px;
+	margin: 0px;
+}
+
+#topinfo {
+	height: 75px;
+	font-size: 12px;
+}
+
+#topinfo span {
+	display: inline-block;
+	text-align: center;
+	line-height: 15px;
+	padding: 5px;
+}
+
+.btn {
+	border-radius: 10%;
+}
+
+#btn-swichtable {
+	background: #FB9727;
+	cursor: pointer;
+}
+
+#btn-pool,#btn-limit {
+	background: #C69F46;
+}
+
+.pool-info {
+	padding: 5px;
+}
+
+.pool-info .pool-amount,.table-info div,.limit-info div {
+	height: 22px;
+}
+
+.table-info div l {
+	display: inline-block;
+	width: 35px;
+}
+
+.pool-amount v,.table-info div v,.limit-info div v {
+	display: inline-block;
+	text-align: left;
+	padding-left: 8px;
+	width: 35px;
+}
+
+.table-info div v {
+	width: 45px;
+}
+
+.vedio-content { /* 	height: 200px; */
+	background: black;
+}
+
+.vedio-content span.btn {
+	background: #fd9c0c none repeat scroll 0 0;
+	cursor: pointer;
+	line-height: 35px;
+	padding: 5px 10px;
+	margin-left: 20px;
+}
+
+.chip-table {
+	display: table;
+	float: left;
+	width: 49%;
+	height: 100%;
+	/* 	margin: 1px; */
+}
+
+.chip-table>div {
+	display: table-cell;
+	padding: 10px 0px;
+	text-align: center;
+	width: 31%;
+	height: 50%;
+	font-size: 36px;
+	height: 100%;
+}
+
+.text-table {
+	display: table;
+	width: 100%;
+}
+
+.text-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.chip-table span:hover {
+	opacity: 0.5;
+}
+
+.chip-table .chip-amount {
+	overflow: auto;
+	/* 	line-height: 25px; */
+	font-size: 16px;
+	height: 25%;
+}
+
+.chip-table .certain-chip {
+	color: #FFFF17;
+}
+
+.dragon-chip {
+	background: #1540E5;
+}
+
+.tie-chip {
+	background: #487018;
+}
+
+.tiger-chip {
+	background: #B02913;
+}
+
+#middle-cmd {
+	height: 36px;
+	font-size: 13px;
+}
+
+#middle-cmd span.btn {
+	line-height: 35px;
+	padding: 5px 10px;
+	background: #6D2C0C;
+	cursor: pointer;
+}
+
+#btn-swichnet {
+	
+}
+
+#btn-confirmchip {
+	
+}
+
+#btn-cancelchip {
+	
+}
+
+#total-chip v {
+	display: inline-block;
+	width: 45px;
+	background: #1D0F06;
+}
+
+#chip-list {
+	text-align: center;
+}
+
+#chip-list span {
+	display: inline-block;
+	width: 50px;
+	height: 40px;
+	background-size: cover;
+	/* 	margin: 2px; */
+	cursor: pointer;
+}
+
+.chip10 {
+	background: url(../img/chip10.png);
+}
+
+.chip10.selected {
+	background: url(../img/chip10h.png);
+}
+
+.chip50 {
+	background: url(../img/chip50.png);
+}
+
+.chip50.selected {
+	background: url(../img/chip50h.png);
+}
+
+.chip100 {
+	background: url(../img/chip100.png);
+}
+
+.chip100.selected {
+	background: url(../img/chip100h.png);
+}
+
+.chip500 {
+	background: url(../img/chip500.png);
+}
+
+.chip500.selected {
+	background: url(../img/chip500h.png);
+}
+
+.chip1k {
+	background: url(../img/chip1k.png);
+}
+
+.chip1k.selected {
+	background: url(../img/chip1kh.png);
+}
+
+.chip5k {
+	background: url(../img/chip5k.png);
+}
+
+.chip5k.selected {
+	background: url(../img/chip5kh.png);
+}
+
+.float-chip {
+	display: none;
+	position: absolute;
+	width: 50px;
+}
+
+.road-info span {
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+}
+
+.road-map { /* 	display: block !important; */
+	white-space: nowrap;
+	text-align: left !important;
+	background: white;
+	width: 280px;
+	height: 120px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	/* 	position:relative;  */
+}
+
+#road-data v {
+	display: inline-block;
+	width: 30px;
+}
+
+#btn-dragon-ask {
+	color: white;
+	font-size: 13px;
+	background: #1540E5;
+}
+
+#btn-tiger-ask {
+	color: white;
+	font-size: 13px;
+	background: #B02913;
+}
+
+#bottom-bar span {
+	margin-left: 8px;
+}
+
+#bottom-bar v {
+	display: inline-block;
+	width: 60px;
+	background: #1D0F06;
+}
+
+#btn-returnhall {
+	line-height: 30px;
+	padding: 5px 10px;
+	background: #BC7115;
+	cursor: pointer;
+	font-size: 12px;
+}
