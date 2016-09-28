@@ -10,6 +10,8 @@
 	<link href="game2/road.css" rel="stylesheet" type="text/css">
 	
 	<script type="text/javascript" src="lib/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="lib/screenfull.min.js"></script>
+	<script type="text/javascript" src="lib/svg.min.js"></script>
 	
 	<link href="lib/videojs/video-js.min.css" rel="stylesheet">
 	<script type="text/javascript" src="lib/videojs/video.min.js"></script>
@@ -27,17 +29,17 @@
 		</span>
 		<span class="content-center" style="display: inline-block; width: 77%; height: 100%;">
 			<div class="video-chip" style="height: 50%;">
-				<div class="game-video" style="float: left; width: 49%; height: 100%;">
-					<video id="really-cool-video" class="video-js vjs-default-skin"
-					 preload="auto" style="width: 100%; height: 100%;" poster="really-cool-video-poster.jpg"
-					 data-setup='{}' src="http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8">
-					  <p class="vjs-no-js">
-					    To view this video please enable JavaScript, and consider upgrading to a web browser
-					    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-					  </p>
-					</video>
+				<div class="game-video" style="float: left; width: 50%; height: 100%;">
+<!-- 					<video id="video-player" class="video-js vjs-default-skin" -->
+<!-- 					 preload="auto" style="width: 100%; height: 100%;" poster="really-cool-video-poster.jpg" -->
+<!-- 					 data-setup='{}' src="http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8"> -->
+<!-- 					  <p class="vjs-no-js"> -->
+<!-- 					    To view this video please enable JavaScript, and consider upgrading to a web browser -->
+<!-- 					    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> -->
+<!-- 					  </p> -->
+<!-- 					</video> -->
 				</div>
-				<div class="chip-table">
+				<div class="chip-table" onclick="test();">
 					<div class="dragon-chip">
 						<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
 						<div class="text-table" style="height: 50%;"><div class="text-cell">龙</div></div>
@@ -56,22 +58,26 @@
 				</div>
 			</div>
 			<div class="road-info" style="height: 50%;">
-				<span class="bead-road road-map"></span>
-				<span class="big-road road-map"></span>
-				<span class="big-eye-road road-map"></span>
-				<span class="little-road road-map"></span>
-				<span class="yy-road road-map"></span>
-				<span class="road-data">
-					<div>龙<v>20</v></div>
-					<div>虎<v>24</v></div>
-					<div>和<v>4</v></div>
-					<div>下局开龙</div>
-					<div>&nbsp;</div>
-					<div>下局开虎</div>
-					<div>&nbsp;</div>
-					<div id="btn-dragon-ask">龙问路</div>
-					<div id="btn-tiger-ask">虎问路</div>
-				</span>
+				<div id="road-one" class="road-collection road-one current">
+				</div>
+				<div id="road-two" class="road-collection road-two"></div>
+				<div id="road-three" class="road-collection road-three"></div>
+<!-- 				<span class="bead-road road-map"></span> -->
+<!-- 				<span class="big-road road-map"></span> -->
+<!-- 				<span class="big-eye-road road-map"></span> -->
+<!-- 				<span class="little-road road-map"></span> -->
+<!-- 				<span class="yy-road road-map"></span> -->
+<!-- 				<span class="road-data"> -->
+<!-- 					<div>龙<v>20</v></div> -->
+<!-- 					<div>虎<v>24</v></div> -->
+<!-- 					<div>和<v>4</v></div> -->
+<!-- 					<div>下局开龙</div> -->
+<!-- 					<div>&nbsp;</div> -->
+<!-- 					<div>下局开虎</div> -->
+<!-- 					<div>&nbsp;</div> -->
+<!-- 					<div id="btn-dragon-ask">龙问路</div> -->
+<!-- 					<div id="btn-tiger-ask">虎问路</div> -->
+<!-- 				</span> -->
 			</div>
 		</span>
 		<span class="chip-list" style="display: inline-block; width: 11%; height: 100%;">

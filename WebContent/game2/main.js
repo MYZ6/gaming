@@ -1,13 +1,34 @@
 ﻿$(function() {
+	if (document.mozFullScreenEnabled) {
+		console.log('slkdfjldksfjldksfj324234')
+	}
 	$('body').height($(window).height());
-	initData();
-	refreshPool();
-
-	initPlayer();
-
-	initEvent();
+	var elem = $('.video-chip')[0];
+	console.log(elem.mozRequestFullScreen)
+	// if (elem.mozRequestFullScreen) {
+	// elem.mozRequestFullScreen();
+	// }
+	// // $('body')[0].requestFullscreen();
+	// initData();
+	// refreshPool();
+	//
+	// initPlayer();
+	//
+	// initEvent();
 
 });
+
+function test() {
+	// var target = $('body')[0];
+	// console.log(elem.mozRequestFullScreen)
+	// if (elem.mozRequestFullScreen) {
+	// elem.mozRequestFullScreen();
+	// }
+	if (screenfull.enabled) {
+		// screenfull.request(target);
+		screenfull.toggle();
+	}
+}
 
 function refreshPool() {
 	$.ajax({
@@ -43,7 +64,7 @@ function initData() {
 }
 var player = null;
 function initPlayer() {
-	player = videojs('really-cool-video', { /* Options */}, function() {
+	player = videojs('video-player', { /* Options */}, function() {
 		console.log('Good to go!');
 
 		this.play(); // if you don't trust autoplay for some reason

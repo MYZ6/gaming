@@ -1,19 +1,100 @@
 ﻿@charset "utf-8";
 
+.road-info .road-collection {
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: relative;
+}
+
+.road-info .road-collection.current {
+	display: block;
+}
+
+.road-info .road-collection .road-map {
+	position: absolute;
+	left: 500px;
+}
+
+.road-map { /* 	display: block !important; */
+	white-space: nowrap;
+	text-align: left !important;
+	/* 	background: white; */
+	/* 	width: 280px; */
+	/* 	height: 120px; */
+	overflow-x: auto;
+	overflow-y: hidden;
+	/* 	position:relative;  */
+}
+
+.road-one {
+/* 	background-image: url(../img/jinbao/grid.png); */
+}
+
+.road-one .bead-road {
+	left: 1% !important;
+	top: 3%;
+	width: 20%;
+	height: 66%;
+}
+
+.road-one .bead-road .col {
+	display: inline-block;
+	width: 16%;
+	height: 100%;
+}
+
+.road-one .bead-road .bead {
+	display: block !important;
+	text-align: left;
+	width: 100%;
+	height: 16%;
+	background-size: 100% 100%;
+}
+
+.road-one .big-road {
+	left: 21% !important;
+	top: 3%;
+	width: 73%;
+	height: 66%;
+}
+
+.road-one .big-road .col {
+	display: inline-block;
+	width: 5%;
+	height: 100%;
+}
+
+.road-one .big-road .bead {
+	display: block !important;
+	text-align: left;
+	width: 100%;
+	height: 16%;
+	background-size: 100% 100%;
+}
+
+.road-two {
+/* 	background-image: url(../img/jinbao/grid2.png); */
+}
+
+.road-three {
+/* 	background-image: url(../img/jinbao/grid3.png); */
+}
+
 /* '﻿﻿.road-map .col' not work, very strange */
 .col {
 	display: inline-block;
-	/* 	width: 20px; */
+	width: 16%;
 	height: 100%;
 }
 
 .road-map .bead {
 	display: block !important;
 	text-align: left;
-	width: 20px;
-	height: 20px;
-	background-size: cover;
-	height: 20px;
+	width: 100%;
+	height: 16%;
+	background-size: 100% 100%;
 }
 
 .bead-road .bead-dragon {
