@@ -1,5 +1,5 @@
 ﻿$(function() {
-//	$('body').height($(window).height());
+	// $('body').height($(window).height());
 	// initData();
 	// refreshPool();
 	//
@@ -7,17 +7,34 @@
 	//
 	// initEvent();
 	if (screen.lockOrientation) {
-//		screen.lockOrientation("orientation");
+		screen.lockOrientation("landscape-primary");
 	}
 
+	if (!screenfull.isFullscreen) {
+		alert('请进入全屏再操作！');
+	}
 });
 
+function lock() {
+	if (screen.lockOrientation) {
+		screen.lockOrientation("landscape-primary");
+	} else {
+		alert("您的浏览器暂不支持锁定横屏操作！");
+	}
+}
+
 function test() {
+	alert(screenfull.enabled)
 	if (screenfull.enabled) {
-//		$('body').height($(window).height());
+		// $('body').height($(window).height());
 		screenfull.toggle();
-//		$('body').height($(window).height());
-//		console.log($(window).height(),$('body').height())
+		// if (screen.lockOrientation) {
+		// screen.lockOrientation("landscape-primary");
+		// }
+		// $('body').height($(window).height());
+		// console.log($(window).height(),$('body').height())
+	} else {
+		alert("您的浏览器暂不支持全屏操作！");
 	}
 }
 
