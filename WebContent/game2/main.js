@@ -1,13 +1,13 @@
 ﻿$(function() {
 	// $('body').height($(window).height());
-	// initData();
+	initData();
 	// refreshPool();
 	//
 	// initPlayer();
 	//
 	initEvent();
 	if (screen.lockOrientation) {
-		screen.lockOrientation("landscape-primary");
+		// screen.lockOrientation("landscape-primary");
 	}
 
 	if (!screenfull.isFullscreen) {
@@ -50,16 +50,24 @@ function refreshPool() {
 function initData() {
 	$.ajax({
 		type : "GET",
-		url : 'data/table.json',
-		error : function() {
-			console.error("query failed");
+		url : 'data/table-list.json',
+		error : function(a, b, c) {
+			console.error(a, b, c, "query failed");
 		},
 		success : function(data) {
-			$('#table-no v').html(data.tableNo);
-			$('#play-no v').html(data.playNo);
-			$('#seq-no v').html(data.seqNo);
-			$('#up-limit v').html(data.upLimit);
-			$('#down-limit v').html(data.downLimit);
+			var table1 = data[0];
+			$('#table-no v').html(table1.tableNo);
+			$('#play-no v').html(table1.playNo);
+			$('#seq-no v').html(table1.seqNo);
+			$('#up-limit v').html(table1.upLimit);
+			$('#down-limit v').html(table1.downLimit);
+
+			$(data).each(
+					function(i, table) {
+						$('.table-list').append(
+								'<div class="table-title">' + table.tableName
+										+ '</div');
+					});
 		}
 	});
 }
@@ -93,6 +101,16 @@ function changeAngle2() {
 }
 
 function initEvent() {
+	if (window.orientation == 0) {
+		alert('建议在横屏下操作！');
+	}
+	$(window).on("orientationchange", function(evt) {
+		// alert(window.orientation )
+		if (window.orientation == 0) {
+			alert('建议在横屏下操作！');
+		}
+	});
+
 	$('.chip-list .chip').click(highlight);
 	function highlight() {
 		if ($(this).hasClass('selected')) {

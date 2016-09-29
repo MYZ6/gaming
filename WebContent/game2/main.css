@@ -59,6 +59,22 @@ body {
 	width: 45px;
 }
 
+.table-list .table-title {
+	width: 90%;
+	height: 45px;
+	line-height: 41px;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	color: #C69F46;
+	margin: 30px 5%;
+	border: 2px #fd9c0c solid;
+	box-sizing: border-box;
+	border-radius: 10%;
+	margin: 15px 5%;
+	border-radius: 10%;
+}
+
 .vedio-content { /* 	height: 200px; */
 	background: black;
 }
@@ -160,15 +176,15 @@ body {
 	text-align: center;
 }
 
-.chip-list .chip {
-/* 	display: inline-block; */
+.chip-list .chip { /* 	display: inline-block; */
 	width: 95%;
-/* 	height: 40px; */
-/* 	background-size: cover; */
+	/* 	height: 40px; */
+	/* 	background-size: cover; */
 	/* 	margin: 2px; */
 	cursor: pointer;
 }
-.chip-list .chip img{
+
+.chip-list .chip img {
 	width: 100%;
 }
 
@@ -219,7 +235,6 @@ body {
 /* .chip5k.selected { */
 /* 	background: url(../img/chip5kh.png); */
 /* } */
-
 .float-chip {
 	display: none;
 	position: absolute;

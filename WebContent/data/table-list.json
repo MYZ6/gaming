@@ -1,0 +1,22 @@
+[{
+	"tableNo": 1,
+	"tableName": "G01",
+	"playNo": 7206,
+	"seqNo": 46,
+	"upLimit": 3000,
+	"downLimit": 10
+},{
+	"tableNo": 2,
+	"tableName": "G02",
+	"playNo": 706,
+	"seqNo": 46,
+	"upLimit": 2100,
+	"downLimit": 10
+},{
+	"tableNo": 3,
+	"tableName": "G05",
+	"playNo": 1506,
+	"seqNo": 22,
+	"upLimit": 5800,
+	"downLimit": 10
+}]
