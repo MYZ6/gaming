@@ -1,32 +1,23 @@
 ﻿$(function() {
-	if (document.mozFullScreenEnabled) {
-		console.log('slkdfjldksfjldksfj324234')
-	}
-	$('body').height($(window).height());
-	var elem = $('.video-chip')[0];
-	console.log(elem.mozRequestFullScreen)
-	// if (elem.mozRequestFullScreen) {
-	// elem.mozRequestFullScreen();
-	// }
-	// // $('body')[0].requestFullscreen();
+//	$('body').height($(window).height());
 	// initData();
 	// refreshPool();
 	//
 	// initPlayer();
 	//
 	// initEvent();
+	if (screen.lockOrientation) {
+//		screen.lockOrientation("orientation");
+	}
 
 });
 
 function test() {
-	// var target = $('body')[0];
-	// console.log(elem.mozRequestFullScreen)
-	// if (elem.mozRequestFullScreen) {
-	// elem.mozRequestFullScreen();
-	// }
 	if (screenfull.enabled) {
-		// screenfull.request(target);
+//		$('body').height($(window).height());
 		screenfull.toggle();
+//		$('body').height($(window).height());
+//		console.log($(window).height(),$('body').height())
 	}
 }
 

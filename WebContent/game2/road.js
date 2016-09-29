@@ -1,5 +1,4 @@
 ﻿$(function() {
-	// refreshRoad();
 	$('.road-info>div').click(function(evt) {
 		$(this).removeClass('current');
 		var $next = $(this).next();
@@ -263,7 +262,6 @@ function bigRoadRender(gameData) {
 		if (invisibleCols < 0) {
 			invisibleCols = 0;
 		}
-		console.log(bigColData, invisibleCols, totalCols, option.maxColNo)
 		// console.log(coordinateArr, bigColData)
 		// console.log(totalCols, invisibleCols, leastCols)
 		for ( var i = invisibleCols; i < totalCols; i++) {

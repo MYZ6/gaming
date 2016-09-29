@@ -3,6 +3,11 @@ body {
 	color: #fff4f0;
 	font-size: 14px;
 	margin: 0px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 #topinfo {
@@ -218,13 +223,11 @@ body {
 	width: 50px;
 }
 
-
 .road-info span {
 	font-size: 12px;
 	display: inline-block;
 	text-align: center;
 }
-
 
 #road-data v {
 	display: inline-block;
