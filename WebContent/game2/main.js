@@ -3,11 +3,11 @@
 	initData();
 	// refreshPool();
 	//
-	// initPlayer();
+	initPlayer();
 	//
 	initEvent();
 	if (screen.lockOrientation) {
-		// screen.lockOrientation("landscape-primary");
+		screen.lockOrientation("landscape-primary");
 	}
 
 	if (!screenfull.isFullscreen) {
@@ -19,7 +19,7 @@ function lock() {
 	if (screen.lockOrientation) {
 		screen.lockOrientation("landscape-primary");
 	} else {
-		alert("您的浏览器暂不支持锁定横屏操作！");
+		toastr.info('您的浏览器暂不支持锁定横屏操作！');
 	}
 }
 
@@ -27,7 +27,37 @@ function toFullscreen() {
 	if (screenfull.enabled) {
 		screenfull.toggle();
 	} else {
-		alert("您的浏览器暂不支持全屏操作！");
+		toastr.info('您的浏览器暂不支持全屏操作！');
+	}
+}
+
+function videoSize() {
+	if ($('.game-video').hasClass('max')) {
+		$('.game-video').removeClass('max');
+		$('.btn-video-size img').attr('src', 'img/jinbao/video_max.png');
+		$('.btn-video-size tc').html('放大视频');
+	} else {
+		$('.game-video').addClass('max');
+		$('.btn-video-size img').attr('src', 'img/jinbao/video_min.png');
+		$('.btn-video-size tc').html('缩小视频');
+	}
+}
+
+function videoSource() {
+	console.log($('.btn-video-source'), $('.btn-video-source').hasClass(
+			'source_near'))
+	if ($('.btn-video-source').hasClass('source_near')) {
+		console.log('sldjlf')
+		$('.btn-video-source').removeClass('source_near');
+		$('.btn-video-source img').attr('src', 'img/jinbao/video_zoomin.png');
+		$('.btn-video-source tc').html('近端视频');
+		changeAngle();
+	} else {
+		console.log('32423')
+		$('.btn-video-source').addClass('source_near');
+		$('.btn-video-source img').attr('src', 'img/jinbao/video_zoomout.png');
+		$('.btn-video-source tc').html('远端视频');
+		changeAngle2();
 	}
 }
 
@@ -101,13 +131,16 @@ function changeAngle2() {
 }
 
 function initEvent() {
+	toastr.options = {
+		"timeOut" : "2000"
+	};
 	if (window.orientation == 0) {
-		alert('建议在横屏下操作！');
+		toastr.info('建议在横屏下操作！');
 	}
 	$(window).on("orientationchange", function(evt) {
 		// alert(window.orientation )
 		if (window.orientation == 0) {
-			alert('建议在横屏下操作！');
+			toastr.info('建议在横屏下操作！');
 		}
 	});
 
