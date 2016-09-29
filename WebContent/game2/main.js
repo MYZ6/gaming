@@ -5,13 +5,13 @@
 	//
 	// initPlayer();
 	//
-	// initEvent();
+	initEvent();
 	if (screen.lockOrientation) {
 		screen.lockOrientation("landscape-primary");
 	}
 
 	if (!screenfull.isFullscreen) {
-		alert('请进入全屏再操作！');
+		// alert('建议在全屏和横屏下操作！');
 	}
 });
 
@@ -23,16 +23,9 @@ function lock() {
 	}
 }
 
-function test() {
-	alert(screenfull.enabled)
+function toFullscreen() {
 	if (screenfull.enabled) {
-		// $('body').height($(window).height());
 		screenfull.toggle();
-		// if (screen.lockOrientation) {
-		// screen.lockOrientation("landscape-primary");
-		// }
-		// $('body').height($(window).height());
-		// console.log($(window).height(),$('body').height())
 	} else {
 		alert("您的浏览器暂不支持全屏操作！");
 	}
@@ -100,17 +93,25 @@ function changeAngle2() {
 }
 
 function initEvent() {
-	$('#chip-list span').click(function(evt) {
+	$('.chip-list .chip').click(highlight);
+	function highlight() {
 		if ($(this).hasClass('selected')) {
 			return;
 		} else {
-			$('#chip-list span.selected').removeClass('selected');
+			$schip = $('.chip-list .selected');
+			var schip = $schip.attr('chip');
+			if (schip != undefined) {
+				$('img', $schip).attr('src', 'img/chip' + schip + '.png');
+				$schip.removeClass('selected');
+			}
+
+			$('img', this).attr('src',
+					'img/chip' + $(this).attr('chip') + 'h.png');
 			$(this).addClass('selected');
 		}
-	});
-	$('#chip-info span').click(function(evt) {
-		var schip = $('#chip-list .selected').attr('chip');
-		console.log(schip)
+	}
+	$('.chip-table div').click(function(evt) {
+		var schip = $('.chip-list .selected').attr('chip');
 		if (schip == undefined) {
 			$(this).css('cursor', 'auto');
 			return;
@@ -126,9 +127,9 @@ function initEvent() {
 			$fchip.hide();
 		}, 200);
 
-		var prepareChip = $('.prepare-chip', this).html();
+		var prepareChip = $('.prepare-chip .text-cell', this).html();
 		prepareChip = parseInt(prepareChip) + parseInt(schip);
-		$('.prepare-chip', this).html(prepareChip);
+		$('.prepare-chip .text-cell', this).html(prepareChip);
 
 	});
 
