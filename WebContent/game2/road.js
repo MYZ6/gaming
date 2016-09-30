@@ -8,7 +8,7 @@
 		$next.addClass('current');
 	});
 
-	canvasObj = svg('road-one', 'grid');
+	canvasObj = svg('road-one', 'grid-dragon');
 	canvasObj2 = svg('road-two', 'grid2');
 	canvasObj3 = svg('road-three', 'grid3');
 
@@ -120,7 +120,6 @@ function refreshRoad() {
 				'cellSize' : 28,
 				'cellPadding' : 2
 			});
-
 		}
 	});
 }
