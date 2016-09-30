@@ -106,12 +106,21 @@ body {
 	z-index: 688;
 }
 
-.btn-video { /* 	margin-left: 25px; */
-	display: inline-block;
-	height: 100%;
-	cursor: pointer;
-	height: 100%;
-	width: 100px;
+
+@media all and (orientation:portrait) {
+	.btn-video {
+		display: none;
+	}
+}
+
+@media all and (orientation:landscape) {
+	.btn-video {
+		display: inline-block;
+		height: 100%;
+		cursor: pointer;
+		height: 100%;
+		width: 100px;
+	}
 }
 
 .btn-video t {
