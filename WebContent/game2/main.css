@@ -106,7 +106,6 @@ body {
 	z-index: 688;
 }
 
-
 @media all and (orientation:portrait) {
 	.btn-video {
 		display: none;
@@ -195,36 +194,6 @@ body {
 	background: #B02913;
 }
 
-#middle-cmd {
-	height: 36px;
-	font-size: 13px;
-}
-
-#middle-cmd span.btn {
-	line-height: 35px;
-	padding: 5px 10px;
-	background: #6D2C0C;
-	cursor: pointer;
-}
-
-#btn-swichnet {
-	
-}
-
-#btn-confirmchip {
-	
-}
-
-#btn-cancelchip {
-	
-}
-
-#total-chip v {
-	display: inline-block;
-	width: 45px;
-	background: #1D0F06;
-}
-
 .chip-list {
 	text-align: center;
 }
@@ -241,96 +210,26 @@ body {
 	width: 100%;
 }
 
-/* .chip10 { */
-/* 	background: url(../img/chip10.png); */
-/* } */
+#float-elements { /* 	display: none; */
+	/* 	position: absolute; */
+	
+}
 
-/* .chip10.selected { */
-/* 	background: url(../img/chip10h.png); */
-/* } */
-
-/* .chip50 { */
-/* 	background: url(../img/chip50.png); */
-/* } */
-
-/* .chip50.selected { */
-/* 	background: url(../img/chip50h.png); */
-/* } */
-
-/* .chip100 { */
-/* 	background: url(../img/chip100.png); */
-/* } */
-
-/* .chip100.selected { */
-/* 	background: url(../img/chip100h.png); */
-/* } */
-
-/* .chip500 { */
-/* 	background: url(../img/chip500.png); */
-/* } */
-
-/* .chip500.selected { */
-/* 	background: url(../img/chip500h.png); */
-/* } */
-
-/* .chip1k { */
-/* 	background: url(../img/chip1k.png); */
-/* } */
-
-/* .chip1k.selected { */
-/* 	background: url(../img/chip1kh.png); */
-/* } */
-
-/* .chip5k { */
-/* 	background: url(../img/chip5k.png); */
-/* } */
-
-/* .chip5k.selected { */
-/* 	background: url(../img/chip5kh.png); */
-/* } */
 .float-chip {
 	display: none;
 	position: absolute;
 	width: 50px;
 }
 
-.road-info span {
-	font-size: 12px;
-	display: inline-block;
-	text-align: center;
+.btn-chip {
+	left: 60%;
+	top: 56%;
+	height: 18%;
+	position: absolute;
+	display: none;
 }
 
-#road-data v {
-	display: inline-block;
-	width: 30px;
-}
-
-#btn-dragon-ask {
-	color: white;
-	font-size: 13px;
-	background: #1540E5;
-}
-
-#btn-tiger-ask {
-	color: white;
-	font-size: 13px;
-	background: #B02913;
-}
-
-#bottom-bar span {
-	margin-left: 8px;
-}
-
-#bottom-bar v {
-	display: inline-block;
-	width: 60px;
-	background: #1D0F06;
-}
-
-#btn-returnhall {
-	line-height: 30px;
-	padding: 5px 10px;
-	background: #BC7115;
+.btn-chip img {
+	height: 100%;
 	cursor: pointer;
-	font-size: 12px;
 }

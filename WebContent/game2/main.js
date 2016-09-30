@@ -182,6 +182,23 @@ function initEvent() {
 		prepareChip = parseInt(prepareChip) + parseInt(schip);
 		$('.prepare-chip .text-cell', this).html(prepareChip);
 
+		$('.btn-chip').show();
+	});
+	$('.btn-chip-cancel').click(function(evt) {
+		$('.chip-table div').each(function(i, ele) {
+			$('.prepare-chip .text-cell', this).html(0);
+		});
+		$('.btn-chip').hide();
+	});
+	$('.btn-chip-confirm').click(function(evt) {
+		$('.chip-table div').each(function(i, ele) {
+			var prepareChip = $('.prepare-chip .text-cell', this).html();
+			var certainChip = $('.certain-chip .text-cell', this).html();
+			certainChip = parseInt(certainChip) + parseInt(prepareChip);
+			$('.certain-chip .text-cell', this).html(certainChip);
+			$('.prepare-chip .text-cell', this).html(0);
+		});
+		$('.btn-chip').hide();
 	});
 
 }
