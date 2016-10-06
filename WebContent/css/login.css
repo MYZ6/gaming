@@ -1,0 +1,44 @@
+html {
+	background: url(../img/jinbao/login_background.png) no-repeat center
+		center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.row {
+	margin: 18px auto;
+	width: 80%;
+	padding: 10px;
+	text-align: center;
+}
+
+.logo {
+	margin-top: 100px;
+	height: 60px;
+	background: url(../img/logo.png) no-repeat center center;
+}
+
+input {
+	width: 220px;
+	height: 36px;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+.field-text {
+	background: #1F1F1F;
+	color: #808080;
+	border: #F3CF56 2px solid;
+	padding-left: 8px;
+}
+
+.btn-login {
+	background: url(../img/jinbao/login_button.png) no-repeat center center;
+	background-size: cover;
+	border: 0px;
+	padding: 0px;
+	height: 50px;
+	width: 235px;
+}
