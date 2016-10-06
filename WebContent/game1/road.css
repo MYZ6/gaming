@@ -1,0 +1,81 @@
+﻿@charset "utf-8";
+
+/* '﻿﻿.road-map .col' not work, very strange */
+.col {
+	display: inline-block;
+	/* 	width: 20px; */
+	height: 100%;
+}
+
+.road-map .bead {
+	display: block !important;
+	text-align: left;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	height: 20px;
+}
+
+.bead-road .bead-dragon {
+	background-image: url(../img/dragon.png);
+}
+
+.bead-road .bead-tiger {
+	background-image: url(../img/tiger.png);
+}
+
+.bead-road .bead-tie {
+	background-image: url(../img/tie.png);
+}
+
+.big-road .big-dragon {
+	background-image: url(../img/bigroad/dragon.png);
+}
+
+.big-road .big-tiger {
+	background-image: url(../img/bigroad/tiger.png);
+}
+
+.big-road .big-dtie1 {
+	background-image: url(../img/bigroad/dragon-tie1.png);
+}
+
+.big-road .big-dtie2 {
+	background-image: url(../img/bigroad/dragon-tie2.png);
+}
+
+.big-road .big-dtie4 {
+	background-image: url(../img/bigroad/dragon-tie4.png);
+}
+
+.big-road .big-ttie1 {
+	background-image: url(../img/bigroad/tiger-tie1.png);
+}
+
+.big-road .big-ttie3 {
+	background-image: url(../img/bigroad/tiger-tie3.png);
+}
+
+.big-eye-road .big-eye-red {
+	background-image: url(../img/bigroad/dragon.png);
+}
+
+.big-eye-road .big-eye-blue {
+	background-image: url(../img/bigroad/tiger.png);
+}
+
+.little-road .little-red {
+	background-image: url(../img/downroad/little-red.png);
+}
+
+.little-road .little-blue {
+	background-image: url(../img/downroad/little-blue.png);
+}
+
+.yy-road .yy-red {
+	background-image: url(../img/downroad/yy-red.png);
+}
+
+.yy-road .yy-blue {
+	background-image: url(../img/downroad/yy-blue.png);
+}

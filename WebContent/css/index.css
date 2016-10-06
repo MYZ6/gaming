@@ -1,0 +1,39 @@
+html {
+	background: url(../img/jinbao/gamehall_background.png) no-repeat center
+		center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.game-item {
+	float: left;
+	width: 50%;
+	height: 470px;
+	background-size: cover;
+}
+
+.game-title {
+	height: 100%;
+}
+
+.baccarat {
+	background: url(../img/jinbao/hall_button_baccarat.png) no-repeat center
+		center;
+}
+
+.baccarat .game-title {
+	background: url(../img/jinbao/hall_button_text_baccarat.png) no-repeat
+		center 330px;
+}
+
+.dragontiger {
+	background: url(../img/jinbao/hall_button_dragontiger.png) no-repeat
+		center center;
+}
+
+.dragontiger .game-title {
+	background: url(../img/jinbao/hall_button_text_dragontiger.png)
+		no-repeat center 330px;
+}

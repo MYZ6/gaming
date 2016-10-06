@@ -4,10 +4,10 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-	<title>龙虎</title>
+	<title>百家乐</title>
 	
-	<link href="game2/main.css" rel="stylesheet" type="text/css">
-	<link href="game2/road.css" rel="stylesheet" type="text/css">
+	<link href="baccarat/main.css" rel="stylesheet" type="text/css">
+	<link href="baccarat/road.css" rel="stylesheet" type="text/css">
 	<link rel="manifest" href="manifest.json" />
 	
 	<script type="text/javascript" src="lib/jquery-1.11.3.js"></script>
@@ -20,8 +20,8 @@
 	<link href="lib/toastr/toastr.min.css" rel="stylesheet"/>
 	<script src="lib/toastr/toastr.min.js"></script>
 	
-	<script type="text/javascript" src="game2/main.js"></script>
-	<script type="text/javascript" src="game2/road.js"></script>
+	<script type="text/javascript" src="baccarat/main.js"></script>
+	<script type="text/javascript" src="baccarat/road.js"></script>
 </head>
 <body style="overflow: hidden;">
 	<div class="top-bar" style="height: 10%;">
@@ -53,21 +53,35 @@
 					  </p>
 					</video>
 				</div>
-				<div class="chip-table">
-					<div class="dragon-chip">
-						<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
-						<div class="text-table" style="height: 50%;"><div class="text-cell">龙</div></div>
-						<div class="chip-amount certain-chip text-table"><div class="text-cell">0</div></div>
+				<div class="chip-zone">
+					<div class="chip-table">
+						<div class="col3 player-chip">
+							<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
+							<div class="chip-text text-table"><div class="text-cell">闲</div></div>
+							<div class="chip-amount certain-chip text-table"><div class="text-cell">0</div></div>
+						</div>
+						<div class="col3 tie-chip">
+							<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
+							<div class="chip-text text-table"><div class="text-cell">和</div></div>
+							<div class="chip-amount certain-chip text-table"><div class="text-cell">0</div></div>
+						</div>
+						<div class="col3 banker-chip">
+							<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
+							<div class="chip-text text-table"><div class="text-cell">庄</div></div>
+							<div class="chip-amount certain-chip text-table"><div class="text-cell">0</div></div>
+						</div>
 					</div>
-					<div class="tie-chip">
-						<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
-						<div class="text-table" style="height: 50%;"><div class="text-cell">和</div></div>
-						<div class="chip-amount certain-chip text-table"><div class="text-cell">0</div></div>
-					</div>
-					<div class="tiger-chip">
-						<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
-						<div class="text-table" style="height: 50%;"><div class="text-cell">虎</div></div>
-						<div class="chip-amount certain-chip text-table"><div class="text-cell">0</div></div>
+					<div class="chip-table">
+						<div class="col2 player-pair-chip">
+							<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
+							<div class="chip-text text-table"><div class="text-cell">闲对</div></div>
+							<div class="chip-amount certain-chip text-table"><div class="text-cell">0</div></div>
+						</div>
+						<div class="col2 banker-pair-chip">
+							<div class="chip-amount prepare-chip text-table"><div class="text-cell">0</div></div>
+							<div class="chip-text text-table"><div class="text-cell">庄对</div></div>
+							<div class="chip-amount certain-chip text-table"><div class="text-cell">0</div></div>
+						</div>
 					</div>
 				</div>
 			</div>

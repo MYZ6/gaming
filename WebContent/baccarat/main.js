@@ -12,7 +12,7 @@
 
 	if (!screenfull.isFullscreen) {
 		// alert('建议在全屏和横屏下操作！');
-	}
+	}alert($(window).height())
 });
 
 function hall(){

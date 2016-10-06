@@ -1,4 +1,4 @@
-﻿body {
+body {
 	background: #593B21;
 	color: #fff4f0;
 	font-size: 14px;
@@ -150,51 +150,51 @@
 }
 
 .chip10 {
-	background: url(img/chip10.png);
+	background: url(../img/chip10.png);
 }
 
 .chip10.selected {
-	background: url(img/chip10h.png);
+	background: url(../img/chip10h.png);
 }
 
 .chip50 {
-	background: url(img/chip50.png);
+	background: url(../img/chip50.png);
 }
 
 .chip50.selected {
-	background: url(img/chip50h.png);
+	background: url(../img/chip50h.png);
 }
 
 .chip100 {
-	background: url(img/chip100.png);
+	background: url(../img/chip100.png);
 }
 
 .chip100.selected {
-	background: url(img/chip100h.png);
+	background: url(../img/chip100h.png);
 }
 
 .chip500 {
-	background: url(img/chip500.png);
+	background: url(../img/chip500.png);
 }
 
 .chip500.selected {
-	background: url(img/chip500h.png);
+	background: url(../img/chip500h.png);
 }
 
 .chip1k {
-	background: url(img/chip1k.png);
+	background: url(../img/chip1k.png);
 }
 
 .chip1k.selected {
-	background: url(img/chip1kh.png);
+	background: url(../img/chip1kh.png);
 }
 
 .chip5k {
-	background: url(img/chip5k.png);
+	background: url(../img/chip5k.png);
 }
 
 .chip5k.selected {
-	background: url(img/chip5kh.png);
+	background: url(../img/chip5kh.png);
 }
 
 .float-chip {

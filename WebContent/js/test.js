@@ -1,161 +1,81 @@
 ﻿$(function() {
-	$('.road-info>div').click(function(evt) {
-		$(this).removeClass('current');
-		var $next = $(this).next();
-		if ($next.length == 0) {
-			$next = $('.road-one');
-		}
-		$next.addClass('current');
-	});
-
-	canvasObj = svg('road-one', 'grid-dragon');
-	canvasObj2 = svg('road-two', 'grid2');
-	canvasObj3 = svg('road-three', 'grid3');
-
-	refreshRoad();
+	svg();
 });
 
-var canvasObj = null;
-var canvasObj2 = null;
-var canvasObj3 = null;
-function svg(_target, _img) {
-	$('#' + _target).empty();
-	var canvasObj = SVG(_target).size('100%', '100%');
-	$('#' + _target + ' svg')[0].setAttribute('preserveAspectRatio', 'none');
-	canvasObj.viewbox({
+function velocity() {
+	$("#rect").delay(500).velocity({
+		x : "+=200",
+		y : "25%"
+	}).velocity({
+		fillGreen : 255,
+		strokeWidth : 2
+	}).velocity({
+		height : 50,
+		width : 50
+	}).velocity({
+		rotateZ : 90,
+		scaleX : 0.5
+	}).velocity("reverse", {
+		delay : 250
+	});
+}
+var draw = null;
+function svg() {
+	draw = SVG('drawing').size('100%', '100%');
+	$('#drawing svg')[0].setAttribute('preserveAspectRatio', 'none');
+	draw.viewbox({
 		x : 0,
 		y : 0,
 		width : 1266,
 		height : 397
 	});
-	var image = canvasObj.image('img/jinbao/' + _img + '.png', 1266, 397);
 
-	return canvasObj;
+	// var rect = draw.rect(100, 100).attr({
+	// fill : '#f06'
+	// });
+	var image = draw.image('img/jinbao/grid.png', 1266, 397);// .move(100,
+	// 100)
+
+	// draw.image('img/banker.png', 40, 40).move(7, 8);
+
+	refreshRoad();
+	draw.text(function(add) {
+		add.tspan('1').fill('#f06')
+	}).font({
+		family : 'Helvetica',
+		size : 36,
+		anchor : 'middle',
+		leading : '1.5em'
+	}).move(890, 350);
 }
 
 function refreshRoad() {
 	$.ajax({
 		type : "GET",
-		url : 'data/dragontiger_history.json',
+		url : 'data/history2.json',
 		error : function() {
 			console.error("query failed");
 		},
 		success : function(data) {
-			gameData = data;
-			drawStatistics();
-//			return;
+			beadRoadRender(data);
 
-			var history = data.history;
-			beadRoadRender({
-				'canvas' : canvasObj,
-				'gameData' : history,
-				'xstart' : 7,
-				'ystart' : 8,
-				'cellSize' : 40,
-				'cellPadding' : 2
-			});
-
-			beadRoadRender({
-				'canvas' : canvasObj2,
-				'gameData' : history,
-				'xstart' : 10,
-				'ystart' : 9,
-				'cellSize' : 60,
-				'cellPadding' : 2
-			});
-
-			bigRoadRender(history);
+			bigRoadRender(data);
 
 			downroadAnalyse();
 
-			downroadRender({
-				'roadType' : 'big-eye',
-				'gameData' : bigEyeData,
-				'canvas' : canvasObj,
-				'xstart' : 7,
-				'ystart' : 263,
-				'cellSize' : 19,
-				'cellPadding' : 2
-			});
+			downroadRender('big-eye', bigEyeData);
+			downroadRender('little', littleData);
+			downroadRender('yy', yyData);
 
-			downroadRender({
-				'roadType' : 'big-eye',
-				'gameData' : bigEyeData,
-				'canvas' : canvasObj3,
-				'xstart' : 7,
-				'ystart' : 9,
-				'cellSize' : 60,
-				'cellPadding' : 2,
-				'maxVCols' : 13
-			});
-			downroadRender({
-				'roadType' : 'little',
-				'gameData' : littleData,
-				'canvas' : canvasObj,
-				'xstart' : 262,
-				'ystart' : 263,
-				'cellSize' : 19,
-				'cellPadding' : 2
-			});
-
-			downroadRender({
-				'roadType' : 'little',
-				'gameData' : littleData,
-				'canvas' : canvasObj3,
-				'xstart' : 824,
-				'ystart' : 9,
-				'cellSize' : 28,
-				'cellPadding' : 2
-			});
-			downroadRender({
-				'roadType' : 'yy',
-				'gameData' : yyData,
-				'canvas' : canvasObj,
-				'xstart' : 520,
-				'ystart' : 263,
-				'cellSize' : 19,
-				'cellPadding' : 2
-			});
-			downroadRender({
-				'roadType' : 'yy',
-				'gameData' : yyData,
-				'canvas' : canvasObj3,
-				'xstart' : 824,
-				'ystart' : 196,
-				'cellSize' : 28,
-				'cellPadding' : 2
-			});
 		}
 	});
 }
 
-function drawStatistics() {
-	var statistics = gameData.statistics;
-	drawText(statistics.count1, 845, 362);
-	drawText(statistics.count2, 940, 362);
-	drawText(statistics.count3, 1030, 362);
-	drawText(statistics.total, 1152, 362);
-
-	function drawText(text, x, y) {
-		canvasObj.text(function(add) {
-			add.tspan(text).fill('#000');
-		}).font({
-			family : 'Helvetica',
-			size : 30,
-			anchor : 'middle',
-			leading : '1.8em'
-		}).move(x, y);
-	}
-}
-
-function beadRoadRender(option) {
-	// console.log(option)
-	var canvas = option.canvas;
-	var gameData = option.gameData;
-	var length = gameData.length;
+function beadRoadRender(data) {
+	var length = data.length;
 	var totalCols = Math.floor((length - 1) / 6 + 1);
 	var invisibleCols = totalCols - 6;
-	$(gameData).each(
+	$(data).each(
 			function(i, item) {
 				var colNo = Math.floor(i / 6);
 				if (colNo + 1 <= invisibleCols) {
@@ -164,23 +84,22 @@ function beadRoadRender(option) {
 
 				var visibleColNo = colNo - invisibleCols;
 				var rowNo = i % 6;
+				var cellSize = 40;
+				var cellPadding = 2;
 				var imgName = 'dragon';
 				if (item.resultType == 2) {
 					imgName = 'tiger';
 				} else if (item.resultType == 3) {
 					imgName = 'tie';
 				}
-				canvas.image('img/' + imgName + '.png', option.cellSize,
-						option.cellSize).move(
-						option.xstart + visibleColNo
-								* (option.cellSize + option.cellPadding),
-						option.ystart + rowNo
-								* (option.cellSize + option.cellPadding));
+				draw.image('img/' + imgName + '.png', cellSize, cellSize).move(
+						7 + visibleColNo * (cellSize + cellPadding),
+						8 + rowNo * (cellSize + cellPadding));
 			});
 }
 
 var bigColData = [];// two dimension
-function bigRoadRender(gameData) {
+function bigRoadRender(data) {
 	var lastType = null;
 	var colNo = 0;
 
@@ -189,7 +108,7 @@ function bigRoadRender(gameData) {
 		coordinateArr[i] = [ -1, -1, -1, -1, -1, -1 ];
 	}
 
-	$(gameData).each(
+	$(data).each(
 			function(i, item) {
 				var rtype = item.resultType;
 				if (lastType == null) {
@@ -261,58 +180,36 @@ function bigRoadRender(gameData) {
 			break;
 		}
 	}
-
-	drawMap({
-		'canvas' : canvasObj,
-		'xstart' : 263,
-		'ystart' : 8,
-		'cellSize' : 40,
-		'cellPadding' : 2,
-		'maxColNo' : 22
-	});
-
-	drawMap({
-		'canvas' : canvasObj2,
-		'xstart' : 390,
-		'ystart' : 9,
-		'cellSize' : 60,
-		'cellPadding' : 2,
-		'maxColNo' : 13
-	});
-
-	function drawMap(option) {
-		var invisibleCols = totalCols - option.maxColNo;
-		if (invisibleCols < 0) {
-			invisibleCols = 0;
-		}
-		// console.log(coordinateArr, bigColData)
-		// console.log(totalCols, invisibleCols, leastCols)
-		for ( var i = invisibleCols; i < totalCols; i++) {
-			var carr = coordinateArr[i];
-			for ( var j = 0; j < 6; j++) {
-				var dataIndex = carr[j];
-				if (dataIndex == -1) {
-					continue;
-				}
-				var item = gameData[dataIndex];
-				var rtype = item.resultType;
-				var tieCount = item.tieCount;
-
-				var imgName = 'dragon';
-				if (tieCount != undefined) {
-					imgName = tieCellRender(rtype, tieCount);
-				} else if (rtype == 2) {
-					imgName = 'tiger';
-				}
-
-				var visibleColNo = i - invisibleCols;
-				option.canvas.image('img/bigroad/' + imgName + '.png',
-						option.cellSize, option.cellSize).move(
-						option.xstart + visibleColNo
-								* (option.cellSize + option.cellPadding),
-						option.ystart + j
-								* (option.cellSize + option.cellPadding));
+	var invisibleCols = totalCols - 22;
+	if (invisibleCols < 0) {
+		invisibleCols = 0;
+	}
+	// console.log(coordinateArr, bigColData)
+	// console.log(totalCols, invisibleCols, leastCols)
+	for ( var i = invisibleCols; i < totalCols; i++) {
+		var carr = coordinateArr[i];
+		for ( var j = 0; j < 6; j++) {
+			var dataIndex = carr[j];
+			if (dataIndex == -1) {
+				continue;
 			}
+			var item = data[dataIndex];
+			var rtype = item.resultType;
+			var tieCount = item.tieCount;
+
+			var imgName = 'dragon';
+			if (tieCount != undefined) {
+				imgName = tieCellRender(rtype, tieCount);
+			} else if (rtype == 2) {
+				imgName = 'tiger';
+			}
+
+			var cellSize = 40;
+			var cellPadding = 2;
+			var visibleColNo = i - invisibleCols;
+			draw.image('img/bigroad/' + imgName + '.png', cellSize, cellSize)
+					.move(263 + visibleColNo * (cellSize + cellPadding),
+							8 + j * (cellSize + cellPadding));
 		}
 	}
 	function tieCellRender(_rtype, _tieCount) {
@@ -535,9 +432,7 @@ function downroadAnalyse() {
 		}
 	});
 }
-function downroadRender(option) {
-	var _roadtype = option.roadType;
-	var gameData = option.gameData;
+function downroadRender(_roadtype, data) {
 	var lastType = null;
 	var colNo = 0;
 	var colDataArr = [];
@@ -547,7 +442,7 @@ function downroadRender(option) {
 		coordinateArr[i] = [ -1, -1, -1, -1, -1, -1 ];
 	}
 
-	$(gameData).each(
+	$(data).each(
 			function(i, item) {
 				var rtype = item.resultType;
 				if (lastType == null) {
@@ -616,21 +511,19 @@ function downroadRender(option) {
 			break;
 		}
 	}
-	var maxVCols = 12;
-	if (option.maxVCols != undefined) {
-		maxVCols = option.maxVCols;
-	}
-	var invisibleCols = totalCols - maxVCols;
+	var invisibleCols = totalCols - 12;
 	if (invisibleCols < 0) {
 		invisibleCols = 0;
 	}
+	// console.log(coordinateArr, colDataArr)
+	// console.log(totalCols, invisibleCols, leastCols)
 	for ( var i = invisibleCols; i < totalCols; i++) {
 		var carr = coordinateArr[i];
 		// console.log(carr, i)
 		for ( var j = 0; j < 6; j++) {
 			var dataIndex = carr[j];
 			if (dataIndex != -1) {
-				var item = gameData[dataIndex];
+				var item = data[dataIndex];
 				var rtype = item.resultType;
 				drawCell(rtype, i, j);
 			}
@@ -638,13 +531,16 @@ function downroadRender(option) {
 	}
 	function drawCell(colorType, i, j) {
 		var imgName = 'bigroad/dragon';
+		var xstartPosition = 7;
 		if (_roadtype == 'little') {
+			xstartPosition = 262;
 			if (colorType == 'blue') {
 				imgName = 'downroad/little-blue';
 			} else {
 				imgName = 'downroad/little-red';
 			}
 		} else if (_roadtype == 'yy') {
+			xstartPosition = 520;
 			if (colorType == 'blue') {
 				imgName = 'downroad/yy-blue';
 			} else {
@@ -655,11 +551,11 @@ function downroadRender(option) {
 				imgName = 'bigroad/tiger';
 			}
 		}
+		var cellSize = 19;
+		var cellPadding = 2;
 		var visibleColNo = i - invisibleCols;
-		option.canvas.image('img/' + imgName + '.png', option.cellSize,
-				option.cellSize).move(
-				option.xstart + visibleColNo
-						* (option.cellSize + option.cellPadding),
-				option.ystart + j * (option.cellSize + option.cellPadding));
+		draw.image('img/' + imgName + '.png', cellSize, cellSize).move(
+				xstartPosition + visibleColNo * (cellSize + cellPadding),
+				263 + j * (cellSize + cellPadding));
 	}
 }
