@@ -7,25 +7,46 @@ html {
 	background-size: cover;
 }
 
+body {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 .game-item {
 	float: left;
 	width: 50%;
-	height: 470px;
+	height: 80%;
 	background-size: cover;
+	position: relative;
+	text-align: center;
 }
 
-.game-title {
+.game-item img {
 	height: 100%;
 }
 
+.game-title {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	bottom: 0px;
+}
+
+.game-title img {
+	height: 100%;
+}
+/**
 .baccarat {
-	background: url(../img/jinbao/hall_button_baccarat.png) no-repeat center
-		center;
+		background: url(../img/jinbao/hall_button_baccarat.png) no-repeat center
+			center;
 }
 
 .baccarat .game-title {
 	background: url(../img/jinbao/hall_button_text_baccarat.png) no-repeat
-		center 330px;
+		center center;
 }
 
 .dragontiger {
@@ -35,5 +56,6 @@ html {
 
 .dragontiger .game-title {
 	background: url(../img/jinbao/hall_button_text_dragontiger.png)
-		no-repeat center 330px;
+		no-repeat center center;
 }
+**/
