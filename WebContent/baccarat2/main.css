@@ -1,0 +1,260 @@
+body {
+	background: #593B21;
+	color: #fff4f0;
+	font-size: 14px;
+	margin: 0px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#topinfo {
+	height: 75px;
+	font-size: 12px;
+}
+
+#topinfo span {
+	display: inline-block;
+	text-align: center;
+	line-height: 15px;
+	padding: 5px;
+}
+
+.btn-fullscreen {
+	float: right;
+	cursor: pointer;
+}
+
+.btn {
+	border-radius: 10%;
+}
+
+#btn-swichtable {
+	background: #FB9727;
+	cursor: pointer;
+}
+
+#btn-pool,#btn-limit {
+	background: #C69F46;
+}
+
+.pool-info {
+	padding: 5px;
+}
+
+.pool-info .pool-amount,.table-info div,.limit-info div {
+	height: 22px;
+}
+
+.table-info div l {
+	display: inline-block;
+	width: 35px;
+}
+
+.pool-amount v,.table-info div v,.limit-info div v {
+	display: inline-block;
+	text-align: left;
+	padding-left: 8px;
+	width: 35px;
+}
+
+.table-info div v {
+	width: 45px;
+}
+
+.table-list .table-title {
+	width: 90%;
+	height: 45px;
+	line-height: 41px;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	color: #C69F46;
+	margin: 30px 5%;
+	border: 2px #fd9c0c solid;
+	box-sizing: border-box;
+	border-radius: 10%;
+	margin: 15px 5%;
+	border-radius: 10%;
+}
+
+.vedio-content { /* 	height: 200px; */
+	background: black;
+}
+
+.vedio-content span.btn {
+	background: #fd9c0c none repeat scroll 0 0;
+	cursor: pointer;
+	line-height: 35px;
+	padding: 5px 10px;
+	margin-left: 20px;
+}
+
+.game-video {
+	position: relative;
+}
+
+.game-video.max {
+	position: absolute;
+	top: 10%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100% !important;
+	z-index: 688;
+}
+
+@media all and (orientation:portrait) {
+	.btn-video {
+		display: none;
+	}
+}
+
+@media all and (orientation:landscape) {
+	.btn-video {
+		display: inline-block;
+		height: 100%;
+		cursor: pointer;
+		height: 100%;
+		width: 100px;
+	}
+}
+
+.btn-video t {
+	float: left;
+	display: table;
+	height: 100%;
+}
+
+.btn-video tc {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 5px;
+}
+
+.btn-video img {
+	float: left;
+	height: 100%;
+}
+
+.chip-zone {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.chip-table {
+	display: table;
+	width: 100%;
+	height: 50%;
+	/* 	margin: 1px; */
+}
+
+.chip-table>div {
+	display: table-cell;
+	padding: 1px 0px;
+	text-align: center;
+	width: 33%;
+	font-size: 21px;
+	height: 100%;
+	border: 1px solid #593B21;
+}
+
+.chip-table>.col2 {
+	width: 48%;
+}
+
+.text-table {
+	display: table;
+	width: 100%;
+}
+
+.text-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.chip-table span:hover {
+	opacity: 0.5;
+}
+
+.chip-table .chip-text {
+	height: 70%;
+}
+
+.chip-table .chip-amount {
+	overflow: auto;
+	font-size: 13px;
+	height: 15%;
+}
+
+@media ( min-height :250px) {
+	.chip-table>div {
+		padding: 3px 0px;
+		font-size: 28px;
+	}
+	.chip-table .chip-text {
+		height: 60%;
+	}
+	.chip-table .chip-amount {
+		height: 20%;
+	}
+}
+
+.chip-table .certain-chip {
+	color: #FFFF17;
+}
+
+.banker-chip,.banker-pair-chip {
+	background: #1540E5;
+}
+
+.tie-chip {
+	background: #487018;
+}
+
+.player-chip,.player-pair-chip {
+	background: #B02913;
+}
+
+.chip-list {
+	text-align: center;
+}
+
+.chip-list .chip { /* 	display: inline-block; */
+	width: 95%;
+	/* 	height: 40px; */
+	/* 	background-size: cover; */
+	/* 	margin: 2px; */
+	cursor: pointer;
+}
+
+.chip-list .chip img {
+	width: 100%;
+}
+
+#float-elements { /* 	display: none; */
+	/* 	position: absolute; */
+	
+}
+
+.float-chip {
+	display: none;
+	position: absolute;
+	width: 50px;
+}
+
+.btn-chip {
+	left: 60%;
+	top: 56%;
+	height: 18%;
+	position: absolute;
+	display: none;
+}
+
+.btn-chip img {
+	height: 100%;
+	cursor: pointer;
+}
