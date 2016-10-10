@@ -8,6 +8,9 @@
 	
 	<link href="baccarat2/main.css" rel="stylesheet" type="text/css">
 	<link href="baccarat2/road.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" media="all and (orientation:portrait)" href="baccarat2/portrait.css">
+	<link rel="stylesheet" media="all and (orientation:landscape)" href="baccarat2/landscape.css">
+	
 	<link rel="manifest" href="manifest.json" />
 	
 	<script type="text/javascript" src="lib/jquery-1.11.3.js"></script>
@@ -87,19 +90,25 @@
 			</div>
 			<div class="road-info" style="height: 50%;">
 				<div id="road-one" class="road-collection road-one current">
-					<div id="canvas1" class="canvas">
+					<div class="wrapper">
+						<div id="canvas1" class="canvas">
+						</div>
 					</div>
 					<div class="status">
 					</div>
 				</div>
 				<div id="road-two" class="road-collection road-two">
-					<div id="canvas2" class="canvas">
+					<div class="wrapper">
+						<div id="canvas2" class="canvas">
+						</div>
 					</div>
 					<div class="status">
 					</div>
 				</div>
 				<div id="road-three" class="road-collection road-three">
-					<div id="canvas3" class="canvas">
+					<div class="wrapper">
+						<div id="canvas3" class="canvas">
+						</div>
 					</div>
 					<div class="status">
 					</div>

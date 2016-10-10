@@ -9,10 +9,12 @@
 	background: #838282;
 }
 
-.road-info .road-collection .canvas {
+.road-info .road-collection .wrapper {
 	width: 92%;
 	height: 100%;
 	float: left;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 
 .road-info .road-collection .status {
