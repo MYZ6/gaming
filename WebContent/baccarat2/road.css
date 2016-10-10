@@ -6,6 +6,21 @@
 	height: 100%;
 	display: none;
 	position: relative;
+	background: #838282;
+}
+
+.road-info .road-collection .canvas {
+	width: 92%;
+	height: 100%;
+	float: left;
+}
+
+.road-info .road-collection .status {
+	float: left;
+	width: 8%;
+	height: 100%;
+	background-size: cover;
+	background-size: 100% 100%;
 }
 
 .road-info .road-collection.current {
@@ -17,146 +32,14 @@
 	left: 500px;
 }
 
-.road-map { /* 	display: block !important; */
-	white-space: nowrap;
-	text-align: left !important;
-	/* 	background: white; */
-	/* 	width: 280px; */
-	/* 	height: 120px; */
-	overflow-x: auto;
-	overflow-y: hidden;
-	/* 	position:relative;  */
+.road-one .status {
+	background-image: url(../img/road/point.png);
 }
 
-.road-one {
-/* 	background-image: url(../img/jinbao/grid.png); */
+.road-two .status {
+	background-image: url(../img/road/point2.png);
 }
 
-.road-one .bead-road {
-	left: 1% !important;
-	top: 3%;
-	width: 20%;
-	height: 66%;
-}
-
-.road-one .bead-road .col {
-	display: inline-block;
-	width: 16%;
-	height: 100%;
-}
-
-.road-one .bead-road .bead {
-	display: block !important;
-	text-align: left;
-	width: 100%;
-	height: 16%;
-	background-size: 100% 100%;
-}
-
-.road-one .big-road {
-	left: 21% !important;
-	top: 3%;
-	width: 73%;
-	height: 66%;
-}
-
-.road-one .big-road .col {
-	display: inline-block;
-	width: 5%;
-	height: 100%;
-}
-
-.road-one .big-road .bead {
-	display: block !important;
-	text-align: left;
-	width: 100%;
-	height: 16%;
-	background-size: 100% 100%;
-}
-
-.road-two {
-/* 	background-image: url(../img/jinbao/grid2.png); */
-}
-
-.road-three {
-/* 	background-image: url(../img/jinbao/grid3.png); */
-}
-
-/* '﻿﻿.road-map .col' not work, very strange */
-.col {
-	display: inline-block;
-	width: 16%;
-	height: 100%;
-}
-
-.road-map .bead {
-	display: block !important;
-	text-align: left;
-	width: 100%;
-	height: 16%;
-	background-size: 100% 100%;
-}
-
-.bead-road .bead-dragon {
-	background-image: url(../img/dragon.png);
-}
-
-.bead-road .bead-tiger {
-	background-image: url(../img/tiger.png);
-}
-
-.bead-road .bead-tie {
-	background-image: url(../img/tie.png);
-}
-
-.big-road .big-dragon {
-	background-image: url(../img/bigroad/dragon.png);
-}
-
-.big-road .big-tiger {
-	background-image: url(../img/bigroad/tiger.png);
-}
-
-.big-road .big-dtie1 {
-	background-image: url(../img/bigroad/dragon-tie1.png);
-}
-
-.big-road .big-dtie2 {
-	background-image: url(../img/bigroad/dragon-tie2.png);
-}
-
-.big-road .big-dtie4 {
-	background-image: url(../img/bigroad/dragon-tie4.png);
-}
-
-.big-road .big-ttie1 {
-	background-image: url(../img/bigroad/tiger-tie1.png);
-}
-
-.big-road .big-ttie3 {
-	background-image: url(../img/bigroad/tiger-tie3.png);
-}
-
-.big-eye-road .big-eye-red {
-	background-image: url(../img/bigroad/dragon.png);
-}
-
-.big-eye-road .big-eye-blue {
-	background-image: url(../img/bigroad/tiger.png);
-}
-
-.little-road .little-red {
-	background-image: url(../img/downroad/little-red.png);
-}
-
-.little-road .little-blue {
-	background-image: url(../img/downroad/little-blue.png);
-}
-
-.yy-road .yy-red {
-	background-image: url(../img/downroad/yy-red.png);
-}
-
-.yy-road .yy-blue {
-	background-image: url(../img/downroad/yy-blue.png);
+.road-three .status {
+	background-image: url(../img/road/point3.png);
 }

@@ -8,9 +8,9 @@
 		$next.addClass('current');
 	});
 
-	canvasObj = svg('road-one', 'grid');
-	canvasObj2 = svg('road-two', 'grid2');
-	canvasObj3 = svg('road-three', 'grid3');
+	canvasObj = svg('canvas1', 'grid');
+	canvasObj2 = svg('canvas2', 'grid2');
+	canvasObj3 = svg('canvas3', 'grid3');
 
 	refreshRoad();
 });
@@ -235,7 +235,7 @@ function sbeadRoadRender(option) {
 	if (invisibleCols < 0) {
 		invisibleCols = 0;
 	}
-//	console.log(invisibleCols,invisibleCols,maxVCols)
+	// console.log(invisibleCols,invisibleCols,maxVCols)
 	$(sbeadroadData).each(
 			function(i, item) {
 				var colNo = Math.floor(i / colLength);
