@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+.scroll-table {
+	margin: 50px;
+}
+
+.scroll-table .table {
+	border-collapse: collapse;
+	border: 1px #e3e3e3 solid;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.scroll-table td {
+	border: 1px solid #e3e3e3;
+	text-align: center;
+	font-size: 15px;
+	line-height: 35px;
+}
+
+.scroll-table th {
+	width: 40px;
+	border: 1px solid #e3e3e3;
+	font-size: 13px;
+	line-height: 25px;
+	text-align: center;
+	font-weight: 100;
+	background: #199fff;
+	color: white;
+}
+
+.scroll-table th,td {
+	height: 40px;
+}
+
+.scroll-table .slash-header {
+	width: 40px;
+}
+/*模拟对角线*/
+.slash-header .container {
+	border-top: 3em #199fff solid; /*上边框宽度等于表格第一行行高*/
+	border-left: 100px #ff8838 solid; /*左边框宽度等于表格第一行第一格宽度*/
+	position: relative; /*让里面的两个子容器绝对定位*/
+	color: white;
+}
+
+.slash-header .container .topright {
+	font-style: normal;
+	display: block;
+	position: absolute;
+	font-size: 14px;
+	top: -24px;
+	left: -90px;
+	width: 50px;
+}
+
+.slash-header .container .leftbottom {
+	font-style: normal;
+	display: block;
+	position: absolute;
+	top: -42px;
+	font-size: 14px;
+	left: -60px;
+	width: 70px;
+}
+
+.scroll-table .table-fixedcol {
+	width: 40px;
+	float: left;
+}
+
+.scroll-table .table-data {
+	float: left;
+}
+
+.scroll-table .data-container {
+	float: left;
+	width: 800px;
+	overflow-x: scroll;
+}
+
+.scroll-table .data-container .table-data {
+	width: 2300px;
+}
