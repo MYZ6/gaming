@@ -13,6 +13,34 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	margin: 0px;
+}
+
+.title-bar {
+	width: 100%;
+	background: #001500;
+	padding-left: 30px;
+	color: #DBD9DB;
+	font-size: 28px;
+	/* 	line-height: 36px; */
+}
+
+.title-bar img {
+	vertical-align: middle;
+}
+
+.title-bar .username {
+	padding-left: 10px;
+}
+
+.title-bar .balance-title {
+	margin-left: 25%;
+	color: #FFF8C7;
+	font-weight: bold;
+}
+
+.title-bar .balance {
+	padding-left: 10px;
 }
 
 .game-item {
