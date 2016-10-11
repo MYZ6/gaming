@@ -7,7 +7,7 @@
 	//
 	initEvent();
 	if (screen.lockOrientation) {
-		screen.lockOrientation("landscape-primary");
+		// screen.lockOrientation("landscape-primary");
 	}
 
 	if (!screenfull.isFullscreen) {
@@ -44,24 +44,6 @@ function videoSize() {
 		$('.game-video').addClass('max');
 		$('.btn-video-size img').attr('src', 'img/jinbao/video_min.png');
 		$('.btn-video-size tc').html('缩小视频');
-	}
-}
-
-function videoSource() {
-	console.log($('.btn-video-source'), $('.btn-video-source').hasClass(
-			'source_near'))
-	if ($('.btn-video-source').hasClass('source_near')) {
-		console.log('sldjlf')
-		$('.btn-video-source').removeClass('source_near');
-		$('.btn-video-source img').attr('src', 'img/jinbao/video_zoomin.png');
-		$('.btn-video-source tc').html('近端视频');
-		changeAngle();
-	} else {
-		console.log('32423')
-		$('.btn-video-source').addClass('source_near');
-		$('.btn-video-source img').attr('src', 'img/jinbao/video_zoomout.png');
-		$('.btn-video-source tc').html('远端视频');
-		changeAngle2();
 	}
 }
 
@@ -117,19 +99,17 @@ function initPlayer() {
 			console.log('awww...over so soon?');
 		});
 	});
-	$('#btn-videonear').click(changeAngle);
-	$('#btn-videofar').click(changeAngle2);
 }
 
-function changeAngle() {
+function changeAngle(_type) {
+	var _url = 'http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/szws.m3u8';
+	if (_type == 2) {
+		_url = 'http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8';
+	} else if (_type == 3) {
+		_url = 'http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/gzws.m3u8';
+	}
 	player.pause();
-	player.src('http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/szws.m3u8');
-	player.load();
-	player.play();
-}
-function changeAngle2() {
-	player.pause();
-	player.src('http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8');
+	player.src(_url);
 	player.load();
 	player.play();
 }
@@ -146,6 +126,21 @@ function initEvent() {
 		if (window.orientation == 0) {
 			toastr.info('建议在横屏下操作！');
 		}
+	});
+
+	$('.video-source .btn').click(function(evt) {
+		if ($(this).hasClass('current')) {
+			return;
+		}
+		if ($(this).hasClass('source-near')) {
+			changeAngle(1);
+		} else if ($(this).hasClass('source-far')) {
+			changeAngle(2);
+		} else {
+			changeAngle(3);
+		}
+		$(this).siblings().removeClass('current');
+		$(this).addClass('current');
 	});
 
 	// scrolling notice

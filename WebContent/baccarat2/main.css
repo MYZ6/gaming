@@ -80,10 +80,6 @@ body {
 	border-radius: 10%;
 }
 
-.vedio-content { /* 	height: 200px; */
-	background: black;
-}
-
 .vedio-content span.btn {
 	background: #fd9c0c none repeat scroll 0 0;
 	cursor: pointer;
@@ -93,12 +89,14 @@ body {
 }
 
 .game-video {
+	background: black;
 	position: relative;
+	color: white;
 }
 
 .game-video.max {
 	position: absolute;
-	top: 10%;
+	top: 8%;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
@@ -106,21 +104,45 @@ body {
 	z-index: 688;
 }
 
-@media all and (orientation:portrait) {
-	.btn-video {
-		display: none;
+.game-video .table-info {
+	width: 100%;
+	height: 12%;
+}
+
+@media ( max-height :250px) {
+	.game-video {
+		font-size: 9px;
+	}
+	.game-video.max {
+		font-size: 16px;
 	}
 }
 
-@media all and (orientation:landscape) {
-	.btn-video {
-		display: inline-block;
-		height: 100%;
-		cursor: pointer;
-		height: 100%;
-		width: 100px;
-	}
+.game-video #video-player {
+	float: left;
+	width: 90%;
+	height: 88%;
 }
+
+.game-video .video-source {
+	float: left;
+	width: 10%;
+	height: 88%;
+	text-align: center;
+}
+
+.game-video .video-source .btn {
+	margin: 5px 0px;
+	padding: 3px;
+	border-radius: 3px;
+	background: orange;
+	width: 20px;
+}
+
+.game-video.max .video-source .btn {
+	margin: 15px 0px;
+}
+
 
 .btn-video t {
 	float: left;
@@ -301,4 +323,5 @@ body {
 .js-marquee t {
 	vertical-align: middle;
 	display: table-cell;
+	white-space: nowrap;
 }

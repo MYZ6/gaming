@@ -36,10 +36,6 @@
 			<img src="img/jinbao/video_max.png">
 			<t><tc>放大视频</tc></t>
 		</span>
-		<span class="btn-video btn-video-source source_near" onclick="videoSource();">
-			<img src="img/jinbao/video_zoomout.png">
-			<t><tc>远端视频</tc></t>
-		</span>
 		
 		<img class="btn-fullscreen" src="img/fullscreen.png" style="height: 100%;" onclick="toFullscreen();">
 	</div>
@@ -49,14 +45,30 @@
 		<div class="content-center" style="float: left; width: 78%; height: 100%;">
 			<div class="video-chip" style="height: 50%;">
 				<div class="game-video" style="float: left; width: 50%; height: 100%;">
+					<div class="table-info" style="">
+						<t>01754靴-056局</t>
+					</div>
+					
 					<video id="video-player" class="video-js vjs-default-skin"
-					 preload="auto" style="width: 100%; height: 100%;" poster="img/logo.png"
-					 data-setup='{}' src="http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/hubws.m3u8">
+					 preload="auto" style="" poster="img/logo.png"
+					 data-setup='{}' src="http://liveproxy.kukuplay.com:9222/mweb/fytv-letv/szws.m3u8">
 					  <p class="vjs-no-js">
 					    To view this video please enable JavaScript, and consider upgrading to a web browser
 					    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 					  </p>
 					</video>
+					
+					<div class="video-source">
+						<div class="btn source-near current">
+							全
+						</div>
+						<div class="btn source-far">
+							远
+						</div>
+						<div class="btn source-hall">
+							厅
+						</div>
+					</div>
 				</div>
 				<div class="chip-zone">
 					<div class="chip-table">
