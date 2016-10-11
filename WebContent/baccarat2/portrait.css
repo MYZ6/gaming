@@ -1,9 +1,13 @@
+.table-list .table-title {
+	font-size: 14px;
+}
+
 .road-info .road-collection .wrapper {
-	width: 88%;
+	width: 90%;
 }
 
 .road-info .road-collection .status {
-	width: 12%;
+	width: 10%;
 }
 
 .road-info .road-collection .wrapper .canvas {

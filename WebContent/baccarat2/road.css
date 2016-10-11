@@ -10,7 +10,7 @@
 }
 
 .road-info .road-collection .wrapper {
-	width: 93%;
+	width: 96%;
 	height: 100%;
 	float: left;
 	overflow-x: auto;
@@ -19,7 +19,7 @@
 
 .road-info .road-collection .status {
 	float: left;
-	width: 7%;
+	width: 4%;
 	height: 100%;
 	background-size: cover;
 	background-size: 100% 100%;
@@ -44,4 +44,8 @@
 
 .road-three .status {
 	background-image: url(../img/road/point3.png);
+}
+
+.road-four .status {
+	background-image: url(../img/road/point4.png);
 }

@@ -11,6 +11,7 @@
 	canvasObj = svg('canvas1', 'grid');
 	canvasObj2 = svg('canvas2', 'grid2');
 	canvasObj3 = svg('canvas3', 'grid3');
+	canvasObj4 = svg('canvas4', 'grid4');
 
 	refreshRoad();
 });
@@ -18,6 +19,7 @@
 var canvasObj = null;
 var canvasObj2 = null;
 var canvasObj3 = null;
+var canvasObj4 = null;
 function svg(_target, _img) {
 	$('#' + _target).empty();
 	var canvasObj = SVG(_target).size('100%', '100%');
@@ -44,19 +46,29 @@ function refreshRoad() {
 		},
 		success : function(data) {
 			gameData = data;
+			drawStatistics();
 
 			var history = data.history;
 			beadRoadRender({
 				'canvas' : canvasObj,
 				'gameData' : history,
+				'xstart' : 19,
+				'ystart' : 9,
+				'cellSize' : 40,
+				'cellPadding' : 2,
+				'maxVCols' : 6
+			});
+
+			beadRoadRender({
+				'canvas' : canvasObj2,
+				'gameData' : history,
 				'xstart' : 12,
-				'ystart' : 12,
+				'ystart' : 13,
 				'cellSize' : 60,
 				'cellPadding' : 2
 			});
-
 			sbeadRoadRender({
-				'canvas' : canvasObj3,
+				'canvas' : canvasObj4,
 				'gameData' : history,
 				'xstart' : 672,
 				'ystart' : 202,
@@ -65,72 +77,63 @@ function refreshRoad() {
 				'maxVCols' : 9
 			});
 
-			// beadRoadRender({
-			// 'canvas' : canvasObj2,
-			// 'gameData' : history,
-			// 'xstart' : 10,
-			// 'ystart' : 9,
-			// 'cellSize' : 60,
-			// 'cellPadding' : 2
-			// });
-
 			bigRoadRender(history);
 
 			downroadAnalyse();
-			//
-			// downroadRender({
-			// 'roadType' : 'big-eye',
-			// 'gameData' : bigEyeData,
-			// 'canvas' : canvasObj,
-			// 'xstart' : 7,
-			// 'ystart' : 263,
-			// 'cellSize' : 19,
-			// 'cellPadding' : 2
-			// });
 
 			downroadRender({
 				'roadType' : 'big-eye',
 				'gameData' : bigEyeData,
-				'canvas' : canvasObj3,
+				'canvas' : canvasObj,
+				'xstart' : 19,
+				'ystart' : 263,
+				'cellSize' : 19,
+				'cellPadding' : 2
+			});
+
+			downroadRender({
+				'roadType' : 'big-eye',
+				'gameData' : bigEyeData,
+				'canvas' : canvasObj4,
 				'xstart' : 28,
 				'ystart' : 10,
 				'cellSize' : 29,
 				'cellPadding' : 2,
 				'maxVCols' : 20
 			});
-			// downroadRender({
-			// 'roadType' : 'little',
-			// 'gameData' : littleData,
-			// 'canvas' : canvasObj,
-			// 'xstart' : 262,
-			// 'ystart' : 263,
-			// 'cellSize' : 19,
-			// 'cellPadding' : 2
-			// });
+			downroadRender({
+				'roadType' : 'little',
+				'gameData' : littleData,
+				'canvas' : canvasObj,
+				'xstart' : 280,
+				'ystart' : 263,
+				'cellSize' : 19,
+				'cellPadding' : 2
+			});
 
 			downroadRender({
 				'roadType' : 'little',
 				'gameData' : littleData,
-				'canvas' : canvasObj3,
+				'canvas' : canvasObj4,
 				'xstart' : 672,
 				'ystart' : 10,
 				'cellSize' : 29,
 				'cellPadding' : 2,
 				'maxVCols' : 18
 			});
-			// downroadRender({
-			// 'roadType' : 'yy',
-			// 'gameData' : yyData,
-			// 'canvas' : canvasObj,
-			// 'xstart' : 520,
-			// 'ystart' : 263,
-			// 'cellSize' : 19,
-			// 'cellPadding' : 2
-			// });
 			downroadRender({
 				'roadType' : 'yy',
 				'gameData' : yyData,
-				'canvas' : canvasObj3,
+				'canvas' : canvasObj,
+				'xstart' : 542,
+				'ystart' : 263,
+				'cellSize' : 19,
+				'cellPadding' : 2
+			});
+			downroadRender({
+				'roadType' : 'yy',
+				'gameData' : yyData,
+				'canvas' : canvasObj4,
 				'xstart' : 28,
 				'ystart' : 202,
 				'cellSize' : 29,
@@ -143,10 +146,10 @@ function refreshRoad() {
 
 function drawStatistics() {
 	var statistics = gameData.statistics;
-	drawText(statistics.count1, 870, 343);
-	drawText(statistics.count2, 1005, 343);
-	drawText(statistics.count3, 1140, 343);
-	drawText(statistics.total, 1147, 375);
+	drawText(statistics.count1, 890, 343);
+	drawText(statistics.count2, 1025, 343);
+	drawText(statistics.count3, 1160, 343);
+	drawText(statistics.total, 1167, 375);
 
 	function drawText(text, x, y) {
 		canvasObj.text(function(add) {
@@ -166,8 +169,11 @@ function beadRoadRender(option) {
 	var gameData = option.gameData;
 	var length = gameData.length;
 	var totalCols = Math.floor((length - 1) / 6 + 1);
-	var maxColNo = 20;
-	var invisibleCols = totalCols - maxColNo;
+	var maxVCols = 20;
+	if (option.maxVCols != undefined) {
+		maxVCols = option.maxVCols;
+	}
+	var invisibleCols = totalCols - maxVCols;
 	if (invisibleCols < 0) {
 		invisibleCols = 0;
 	}
@@ -346,17 +352,17 @@ function bigRoadRender(gameData) {
 		}
 	}
 
-	// drawMap({
-	// 'canvas' : canvasObj,
-	// 'xstart' : 263,
-	// 'ystart' : 8,
-	// 'cellSize' : 40,
-	// 'cellPadding' : 2,
-	// 'maxColNo' : 22
-	// });
+	drawMap({
+		'canvas' : canvasObj,
+		'xstart' : 280,
+		'ystart' : 8,
+		'cellSize' : 40,
+		'cellPadding' : 2,
+		'maxColNo' : 23
+	});
 
 	drawMap({
-		'canvas' : canvasObj2,
+		'canvas' : canvasObj3,
 		'xstart' : 12,
 		'ystart' : 12,
 		'cellSize' : 60,
