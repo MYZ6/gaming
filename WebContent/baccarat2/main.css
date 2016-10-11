@@ -221,6 +221,7 @@ body {
 
 .chip-list {
 	text-align: center;
+	overflow: hidden;
 }
 
 .chip-list .chip { /* 	display: inline-block; */
@@ -257,4 +258,47 @@ body {
 .btn-chip img {
 	height: 100%;
 	cursor: pointer;
+}
+
+.notice-title {
+	width: 20%;
+	height: 100%;
+	float: left;
+	text-align: right;
+	display: table;
+}
+
+.notice-title t {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.marquee {
+	width: 80%;
+	height: 100%;
+	overflow: hidden;
+	float: left;
+}
+
+.js-marquee-wrapper {
+	height: 100%;
+}
+
+.js-marquee-wrapper::after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.js-marquee {
+	height: 100%;
+	display: table;
+}
+
+.js-marquee t {
+	vertical-align: middle;
+	display: table-cell;
 }

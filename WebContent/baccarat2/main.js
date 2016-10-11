@@ -15,7 +15,7 @@
 	}
 });
 
-function hall(){
+function hall() {
 	location.href = "index.html";
 }
 
@@ -147,6 +147,18 @@ function initEvent() {
 			toastr.info('建议在横屏下操作！');
 		}
 	});
+
+	// scrolling notice
+	$('.marquee').marquee({
+		// speed in milliseconds of the marquee
+		duration : 8000,
+		// gap in pixels between the tickers
+		gap : 350,
+		duplicated : true
+	});
+	setTimeout(function() {
+		// $('.marquee').marquee('pause');
+	}, 3000);
 
 	$('.chip-list .chip').click(highlight);
 	function highlight() {
