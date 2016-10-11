@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title>游戏大厅</title>
+	
+	<link href="hall/main.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" media="all and (orientation:portrait)" href="hall/portrait.css">
+	<link rel="stylesheet" media="all and (orientation:landscape)" href="hall/landscape.css">
+	
+	<script type="text/javascript" src="lib/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="lib/screenfull.min.js"></script>
+	<script type="text/javascript" src="lib/svg.min.js"></script>
+	<script type="text/javascript" src="hall/main.js"></script>
+	<script type="text/javascript" src="hall/road.js"></script>
+</head>
+<body style="overflow: hidden;">
+	<div class="hall-menu">
+		<div class="logo">&nbsp;</div>
+		<div class="house-item current">
+			<div class="btn">百家乐</div>
+		</div>
+		<div class="house-item">
+			<div class="btn">龙虎</div>
+		</div>
+	</div>
+	<div class="hall-content">
+		<div class="table-item">
+			<span class="">龙虎</span>
+			<span class="">场<v>6640</v></span>
+			<span class="">次<v>19</v></span>
+			<span class="btn-play"><ic>&gt;</ic>开始游戏</span>
+			<div class="canvas">
+			</div>
+		</div>
+		<div class="table-item">
+			<div class="canvas">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

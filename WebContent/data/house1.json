@@ -1,0 +1,161 @@
+[{
+	"tableNo": 1,
+	"tableType": 1,
+	"tableName": "16",
+	"playNo": 7206,
+	"seqNo": 46,
+	"upLimit": 3000,
+	"downLimit": 10,
+	"gameData": [
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	}]
+},{
+	"tableNo": 2,
+	"tableType": 1,
+	"tableName": "15",
+	"playNo": 706,
+	"seqNo": 46,
+	"upLimit": 2100,
+	"downLimit": 10,
+	"gameData": [{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	}]
+},{
+	"tableNo": 3,
+	"tableType": 1,
+	"tableName": "8",
+	"playNo": 1506,
+	"seqNo": 22,
+	"upLimit": 5800,
+	"downLimit": 10,
+	"gameData": [{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 1,
+		"result": "龙",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 3,
+		"result": "和",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	},
+	{
+		"resultType": 2,
+		"result": "虎",
+		"recordTime": "2016-09-11 03:22:13"
+	}]
+}]

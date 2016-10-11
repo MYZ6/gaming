@@ -1,3 +1,3 @@
 function login() {
-	location.href = "index.html";
+	location.href = "hall.html";
 }

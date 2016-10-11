@@ -1,0 +1,26 @@
+.hall-menu {
+	float: left;
+	width: 25%;
+	height: 100%;
+	background: #442818;
+	text-align: center;
+}
+
+.hall-content {
+	float: left;
+	width: 75%;
+	height: 100%;
+}
+
+.logo {
+	margin-top: 15%;
+	height: 60px;
+}
+
+.house-item {
+	margin: 20px auto;
+}
+
+.table-item .canvas {
+	height: 150px;
+}

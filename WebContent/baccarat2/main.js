@@ -16,7 +16,7 @@
 });
 
 function hall() {
-	location.href = "index.html";
+	location.href = "hall.html";
 }
 
 function lock() {
